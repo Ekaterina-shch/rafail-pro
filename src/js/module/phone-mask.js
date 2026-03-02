@@ -1,14 +1,22 @@
 export const initPhoneMasks = () => {
   const inputs = document.querySelectorAll('.input-phone');
 
-  const cleanPhoneNumber = (value) => value.replace(/\D/g, '');
+  const cleanPhoneNumber = (value) => {
+    let cleaned = value.replace(/\D/g, '');
+
+    if (cleaned.startsWith('7') && cleaned.length > 1) {
+      cleaned = cleaned.substring(1);
+    }
+    return cleaned;
+  };
 
   const formatPhoneNumber = (value) => {
-    const numbers = cleanPhoneNumber(value).substring(0, 10); // Ограничиваем 10 цифрами
-    let formatted = '';
+    const numbers = cleanPhoneNumber(value).substring(0, 10);
+    // +7 всегда сначала
+    let formatted = '+7';
 
     if (numbers.length > 0) {
-      formatted += `(${numbers.substring(0, 3)}`;
+      formatted += ` (${numbers.substring(0, 3)}`;
     }
     if (numbers.length >= 4) {
       formatted += `) ${numbers.substring(3, 6)}`;
@@ -24,12 +32,11 @@ export const initPhoneMasks = () => {
 
   const onPhoneInput = (e) => {
     const input = e.target;
-    const selectionStart = input.selectionStart; // Запоминаем позицию курсора
+    const selectionStart = input.selectionStart;
     const oldLength = input.value.length;
 
     input.value = formatPhoneNumber(input.value);
 
-    // Логика, чтобы курсор не прыгал в конец при редактировании в середине
     if (e.inputType !== 'deleteContentBackward') {
       const newLength = input.value.length;
       const pos = selectionStart + (newLength - oldLength);
@@ -39,9 +46,10 @@ export const initPhoneMasks = () => {
 
   const onPhoneKeyDown = (e) => {
     const input = e.target;
-    // Если стираем последнюю цифру, очищаем поле полностью
+
     if (e.key === 'Backspace' && cleanPhoneNumber(input.value).length === 1) {
-      input.value = '';
+      input.value = '+7 ';
+      e.preventDefault();
     }
   };
 
@@ -62,6 +70,5 @@ export const initPhoneMasks = () => {
 };
 
 export const getFormattedPhoneNumber = (input, countryCode = '+7') => {
-  const numbers = input.value.replace(/\D/g, '');
-  return numbers ? `${countryCode} ${input.value.trim()}` : '';
+  return formatPhoneNumber(input.value);
 };
