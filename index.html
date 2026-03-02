@@ -7,22 +7,79 @@
     <title>Проблемы и решения с примерами</title>
   </head>
   <body>
-    <div class="breadcrumbs">
-      <div class="container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a href="/">
-                <span>Главная</span>
-              </a>
-            </li>
-            <li class="breadcrumbs__item active">
-              <span>Проблемы и решения с примерами</span>
-            </li>
-          </ol>
-        </nav>
+    <header class="header">
+      <div class="header__top header__top--fixed">
+        <div class="container">
+          <div class="header__logo">
+            <a href="/">
+              <img
+                src="/public/logo.svg"
+                alt="Логотип Рафаиль Фалахеев"
+                width="121"
+                height="26"
+              />
+            </a>
+          </div>
+          <div class="header__socials">
+            <p class="header__slogan">
+              Практические разборы. <br />
+              Результаты. Подписывайтесь
+            </p>
+            <a href="#" class="header__socials-link" title="Перейти в Телеграм">
+              <img src="/src/assets/img/tg.svg" alt="" width="26" height="26" />
+            </a>
+            <a
+              href="#"
+              class="header__socials-link"
+              title="Перейти в Вконтакте"
+            >
+              <img src="/src/assets/img/vk.svg" alt="" width="26" height="26" />
+            </a>
+          </div>
+          <button class="header__burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
-    </div>
+      <div class="header__middle">
+        <div class="container">
+          <p>Практическая база знаний</p>
+          <p>«Как создать рекламу и сайт, которые работают»</p>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <li class="header__menu-item"><a href="#">О нас</a></li>
+              <li class="header__menu-item"><a href="#">Услуги</a></li>
+              <li class="header__menu-item"><a href="#">Портфолио</a></li>
+              <li class="header__menu-item"><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="breadcrumbs">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="/">
+                  <span>Главная</span>
+                </a>
+              </li>
+              <li class="breadcrumbs__item active">
+                <span>Проблемы и решения с примерами</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
