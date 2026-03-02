@@ -1,0 +1,22 @@
+.breadcrumbs {
+  font-size: var(--font-s);
+  line-height: 100%;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.breadcrumbs__item.active span {
+  color: var(--gray);
+}
+
+.breadcrumbs li:not(:last-child):after {
+  content: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.1161 6L4.05806 2.94194C3.81398 2.69787 3.81398 2.30213 4.05806 2.05806C4.30213 1.81398 4.69786 1.81398 4.94194 2.05806L8.44195 5.55805C8.686 5.80215 8.686 6.19785 8.44195 6.44195L4.94194 9.94195C4.69786 10.186 4.30213 10.186 4.05806 9.94195C3.81398 9.69785 3.81398 9.30215 4.05806 9.05805L7.1161 6Z' fill='black'/%3E%3C/svg%3E%0A");
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-left: 6px;
+  margin-top: 2px;
+}
