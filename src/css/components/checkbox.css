@@ -1,0 +1,55 @@
+.checkbox-item {
+  display: inline-flex;
+  position: relative;
+  align-items: flex-start;
+  cursor: pointer;
+  user-select: none;
+}
+.checkbox-item input[type='checkbox'] {
+  height: 0;
+  left: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.checkmark {
+  -ms-flex-negative: 0;
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-item input[type='checkbox']:checked + .checkmark:after {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7L6 10L12 4' stroke='%23282828' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  content: '';
+  height: 90%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.checkbox-item input[type='checkbox']:checked + .checkmark {
+}
+
+.checkbox-item input[type='checkbox']:focus-visible + .checkmark {
+  border-color: var(--gray);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .checkbox-item:hover .checkmark {
+    border-color: var(--secondary);
+  }
+}

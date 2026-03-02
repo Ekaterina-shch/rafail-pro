@@ -1,0 +1,33 @@
+button,
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 35px 13px;
+  height: 48px;
+  border-radius: var(--border-r-m);
+  gap: 5px;
+  border: 2px solid transparent;
+  font: var(--font-btn);
+}
+
+button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid #000;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.button-primary:active {
+  background-color: var(--primary-active);
+}
+.button-primary:disabled,
+.button-primary.disabled {
+  background-color: var(--gray);
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+}

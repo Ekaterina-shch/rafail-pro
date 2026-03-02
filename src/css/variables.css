@@ -1,0 +1,45 @@
+:root {
+  --primary: #126df7;
+  /* --secondary: #1f5fc0; */
+  --secondary: #afdafc;
+
+  --dark: #212528;
+  --white: #ffffff;
+  --gray: #6b6b6b;
+
+  --bg: #f2f4f7;
+  --bg2: #f7f6f2;
+
+  --line: #e3e3e3;
+
+  --font-h1: 600 28px / 110% 'Inter';
+  --font-h2: 600 22px / 110% 'Inter';
+  --font-h3: 600 20px / 110% 'Inter';
+
+  --font-xs: 13px;
+  --font-s: 14px;
+  --font-m: 16px;
+  --font-l: 18px;
+  --font-xl: 20px;
+  --font-xxl: 24px;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --font-h1: 600 34px / 110% 'Inter';
+    --font-h2: 600 28px / 110% 'Inter';
+    --font-h3: 600 22px / 110% 'Inter';
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    --font-h1: 600 40px / 110% 'Inter';
+    --font-h2: 600 30px / 110% 'Inter';
+  }
+}
+@media screen and (min-width: 1920px) {
+  :root {
+    --font-h1: 600 46px / 110% 'Inter';
+    --font-h2: 600 34px / 110% 'Inter';
+    --font-h3: 600 26px / 110% 'Inter';
+  }
+}

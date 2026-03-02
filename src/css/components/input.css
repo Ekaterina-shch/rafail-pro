@@ -1,0 +1,29 @@
+input:not(input[type='checkbox']) {
+  font-size: var(--font-m);
+  font-weight: 500;
+  background-color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 19px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 56px;
+}
+input:focus {
+  border: 1px solid var(--gray);
+}
+input:focus-visible {
+  outline: 1px solid var(--gray);
+}
+input::placeholder {
+  color: var(--gray);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  input:not(input[type='checkbox']):hover {
+    border-color: var(--secondary);
+    cursor: text;
+  }
+}
