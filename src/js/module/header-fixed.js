@@ -1,23 +1,23 @@
-export const initStickyHeader = (
-  headerSelector = '.header__top',
-  fixedClass = 'header__top--fixed',
-) => {
-  const header = document.querySelector(headerSelector);
+export const initStickyHeader = () => {
+  const header = document.querySelector('.header-top');
+  const fixedClass = 'header-top--fixed';
 
-  if (!header) {
-    console.warn(`Элемент с селектором "${headerSelector}" не найден.`);
-    return;
-  }
+  if (!header) return;
 
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
+  const handleHeaderState = () => {
+    const isMobileOrTablet = window.innerWidth < 1024;
+    const isScrolled = window.scrollY > 0;
+
+    if (isMobileOrTablet && isScrolled) {
       header.classList.add(fixedClass);
     } else {
       header.classList.remove(fixedClass);
     }
   };
 
-  handleScroll();
+  window.addEventListener('scroll', handleHeaderState, { passive: true });
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleHeaderState);
+
+  handleHeaderState();
 };

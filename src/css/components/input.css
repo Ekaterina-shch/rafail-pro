@@ -23,7 +23,7 @@ input::placeholder {
 
 @media (hover: hover) and (pointer: fine) {
   input:not(input[type='checkbox']):hover {
-    border-color: var(--secondary);
+    border-color: var(--tertiary);
     cursor: text;
   }
 }

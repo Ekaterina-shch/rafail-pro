@@ -50,6 +50,6 @@
 
 @media (hover: hover) and (pointer: fine) {
   .checkbox-item:hover .checkmark {
-    border-color: var(--secondary);
+    border-color: var(--tertiary);
   }
 }

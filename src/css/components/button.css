@@ -1,33 +1,53 @@
 button,
-.button {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 11px 35px 13px;
-  height: 48px;
   border-radius: var(--border-r-m);
   gap: 5px;
-  border: 2px solid transparent;
-  font: var(--font-btn);
+  width: fit-content;
 }
 
 button:focus-visible,
-.button:focus-visible {
+.btn:focus-visible {
   outline: 2px solid #000;
 }
 
-.button-primary {
-  background-color: var(--primary);
-  color: var(--white);
+.btn {
+  background-color: var(--bg);
+  color: var(--dark);
+  border-radius: 10px;
+
+  font-weight: 700;
 }
-.button-primary:active {
-  background-color: var(--primary-active);
+.btn-big {
+  padding: 0 30px;
+  height: 56px;
+  font-size: var(--font-l);
+  line-height: 24px;
 }
-.button-primary:disabled,
-.button-primary.disabled {
+.btn-small {
+  padding: 0 16px;
+  height: 34px;
+  font-size: var(--font-s);
+  line-height: 12px;
+}
+.btn-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+/* .btn-primary:active {
+ 
+} */
+.btn:disabled,
+.btn.disabled {
   background-color: var(--gray);
   pointer-events: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background-color: var(--line);
+  }
 }
