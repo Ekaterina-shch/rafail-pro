@@ -5,6 +5,7 @@
   --dark: #212528;
   --white: #ffffff;
   --gray: #6b6b6b;
+  --yellow: #f6be36;
 
   --bg: #f2f4f7;
   --bg2: #f7f6f2;
@@ -35,7 +36,7 @@
     --font-h2: 600 30px / 110% 'Inter';
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1400px) {
   :root {
     --font-h1: 600 46px / 110% 'Inter';
     --font-h2: 600 34px / 110% 'Inter';

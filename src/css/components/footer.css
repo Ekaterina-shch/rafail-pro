@@ -1,0 +1,107 @@
+.footer {
+  background-color: var(--dark);
+  color: #7c7c7c;
+}
+.footer__top {
+  padding-top: 10px;
+  border-bottom: 1px solid#363A3D;
+}
+.footer__bottom .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__top .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 40px;
+}
+.footer__copyright {
+  font-size: var(--font-m);
+  margin-bottom: 10px;
+}
+.footer__copy-text {
+  font-size: var(--font-s);
+  line-height: 140%;
+}
+.footer__owner {
+  font-size: var(--font-m);
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__item-text {
+  max-width: 518px;
+  font-size: var(--font-s);
+  line-height: 140%;
+}
+
+.footer a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer a:hover {
+    color: var(--yellow);
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__top {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .footer__top .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__copy-text {
+    font-size: var(--font-m);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__bottom .container {
+    flex-direction: row;
+    gap: 60px;
+  }
+  .footer__top .container {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .footer__copy {
+    max-width: 636px;
+  }
+  .footer__item {
+    flex-direction: column;
+    flex: 0 1 30%;
+  }
+  .footer__item-policy {
+    flex: 0 1 40%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .footer__copy {
+    max-width: 803px;
+  }
+  .footer__item {
+    flex-direction: column;
+    flex: 0 1 28%;
+  }
+  .footer__item-policy {
+    flex: 0 1 42%;
+  }
+}
