@@ -14,7 +14,31 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  p {
+  p:not([class]) {
     margin-bottom: 30px;
+  }
+}
+.post-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.stats-text {
+  color: var(--gray);
+  font-size: var(--font-s);
+  line-height: 140%;
+}
+.stats-highlight {
+  font-size: var(--font-s);
+  line-height: 140%;
+}
+@media screen and (min-width: 768px) {
+  .post-stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .stats-group.views {
+    text-align: right;
   }
 }
