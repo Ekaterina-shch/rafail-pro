@@ -12,3 +12,6 @@
 @import './components/checkbox.css';
 @import './components/breadcrumbs.css';
 @import './components/subscription-block.css';
+@import './components/article.css';
+@import './components/article-alert.css';
+@import './components/toc.css';

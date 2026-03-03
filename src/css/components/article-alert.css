@@ -1,0 +1,30 @@
+.article-alert {
+  --alert-bg: transparent;
+  --alert-accent: var(--dark);
+
+  padding: 20px 10px;
+  background-color: var(--alert-bg);
+  margin-bottom: 30px;
+}
+.article-alert--problem {
+  --alert-bg: var(--bg-red-soft);
+  --alert-accent: var(--red-soft);
+}
+.article-alert--success {
+  --alert-bg: var(--bg-green);
+  --alert-accent: var(--green);
+}
+.article-alert--minimal {
+  --alert-accent: var(--blue);
+}
+.article-alert__label {
+  margin-bottom: 10px;
+  background-color: var(--alert-accent);
+  color: var(--white);
+  padding: 5px 10px;
+  font-size: var(--font-xl);
+  line-height: 140%;
+  font-weight: 700;
+  border-radius: 10px;
+  display: inline-block;
+}

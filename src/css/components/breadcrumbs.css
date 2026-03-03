@@ -1,6 +1,7 @@
 .breadcrumbs {
   font-size: var(--font-s);
   line-height: 100%;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs__item {
@@ -19,4 +20,9 @@
   display: inline-block;
   margin-left: 6px;
   margin-top: 2px;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumbs {
+    margin-bottom: 30px;
+  }
 }

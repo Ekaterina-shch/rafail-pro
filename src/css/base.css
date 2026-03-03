@@ -3,15 +3,19 @@ body {
   letter-spacing: -2%;
   line-height: 140%;
   color: var(--dark);
+  background-color: #f6f7f8;
 }
 
-h1 {
+h1,
+.h1 {
   font: var(--font-h1);
 }
-h2 {
+h2,
+.h2 {
   font: var(--font-h2);
 }
-h3 {
+h3,
+.h3 {
   font: var(--font-h3);
 }
 
@@ -36,6 +40,9 @@ h3 {
 .text-white {
   color: var(--white);
 }
+.main {
+  padding-top: 20px;
+}
 @media screen and (min-width: 768px) {
   body {
     font-size: var(--font-xl);
@@ -43,6 +50,9 @@ h3 {
   .container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .main {
+    padding-top: 30px;
   }
 }
 @media screen and (min-width: 1024px) {

@@ -1,0 +1,20 @@
+.article {
+  background-color: var(--white);
+  padding: 30px 15px;
+  border-radius: 20px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
