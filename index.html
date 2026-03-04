@@ -759,6 +759,112 @@
                   чеклист для самопроверки можно скачать по ссылке ниже.
                 </p>
               </section>
+              <div class="line"></div>
+              <section>
+                <!-- Обязательный блок для вставки изображения -->
+                <figure>
+                  <div class="image-wrapper">
+                    <img
+                      src="/src/assets/img/screenshot.jpg"
+                      alt="Скриншот"
+                      class="article-image"
+                    />
+                    <button
+                      type="button"
+                      class="zoom-btn"
+                      aria-label="Увеличить фото"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="9"
+                          cy="9"
+                          r="8"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M14.5 15.5L18 19"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M9 6V12"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M12.0059 8.99414L6.00586 8.99414"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <figcaption>
+                    Показатели переходов (Скриншот Яндекс Метрики)
+                  </figcaption>
+                </figure>
+                <figure>
+                  <div class="image-wrapper">
+                    <img
+                      src="https://i.pinimg.com/736x/d6/10/34/d610348e3caee86c742055d0202d4b2c.jpg"
+                      alt="Скриншот"
+                      class="article-image"
+                    />
+                    <button
+                      type="button"
+                      class="zoom-btn"
+                      aria-label="Увеличить фото"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="9"
+                          cy="9"
+                          r="8"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M14.5 15.5L18 19"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M9 6V12"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M12.0059 8.99414L6.00586 8.99414"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <figcaption>
+                    Показатели переходов (Скриншот Яндекс Метрики)
+                  </figcaption>
+                </figure>
+              </section>
             </article>
           </div>
           <aside class="article-side">
@@ -1013,6 +1119,35 @@
           </div>
         </div>
       </section>
+    </div>
+    <div class="modal overlay" id="image-modal">
+      <button class="modal-close" aria-label="Закрыть">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.7072 2.70715L2.70731 18.7072C2.31678 19.0977 1.68362 19.0977 1.29309 18.7072C0.902567 18.3166 0.902565 17.6835 1.29309 17.2929L17.293 1.29294C17.6835 0.902411 18.3167 0.902409 18.7072 1.29293C19.0977 1.68346 19.0977 2.31662 18.7072 2.70715Z"
+            fill="#2B2B2B"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M1.29289 1.29292C1.68342 0.902398 2.31658 0.902398 2.70711 1.29292L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0977 17.6834 19.0977 17.2929 18.7071L1.29289 2.70714C0.902369 2.31661 0.902369 1.68345 1.29289 1.29292Z"
+            fill="#2B2B2B"
+          />
+        </svg>
+      </button>
+      <div class="modal__wrapper">
+        <div class="image-wrapper">
+          <img class="modal-content" src="" alt="Zoomed view" />
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>

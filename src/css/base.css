@@ -30,6 +30,53 @@ a {
 a:hover {
   color: var(--primary);
 }
+figure {
+  margin-bottom: 30px;
+  /* max-height: 500px; */
+}
+.image-wrapper {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+
+  width: fit-content; /* Контейнер сожмется под размер картинки */
+  max-width: 100%; /* Но не станет шире родителя */
+  margin: 0 auto;
+}
+figure .article-image {
+  display: block;
+  width: a;
+  max-width: 100%; /* Горизонтальные займут всю ширину */
+  height: auto; /* Сохраняем пропорции */
+
+  /* Ограничение для вертикальных фото */
+  max-height: 70vh;
+}
+figure figcaption {
+  margin-top: 10px;
+  color: var(--gray);
+  font-size: var(--font-s);
+  line-height: 140%;
+}
+.zoom-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px 0;
+  background-color: var(--dark);
+  opacity: 0.7;
+  transition: all 0.2s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.zoom-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.zoom-btn:hover {
+  opacity: 1;
+}
 .hidden {
   display: none !important;
 }
@@ -131,7 +178,5 @@ a:hover {
     top: 108px;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
-    /* height: calc(100vh - 108px - 30px); */
   }
 }
