@@ -109,10 +109,12 @@
     padding: 20px;
   }
   .author-card--fixed {
-    position: sticky;
+    /* position: sticky;
     bottom: auto;
     left: auto;
-    top: 108px;
+    top: 108px; */
+    position: relative;
+    inset: auto;
   }
   .author-card__btn-close {
     display: none;
