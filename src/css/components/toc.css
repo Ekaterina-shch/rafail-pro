@@ -1,5 +1,5 @@
 .toc {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 .toc__title {
   margin-bottom: 30px;
@@ -34,10 +34,6 @@
   margin-bottom: 0;
 }
 .toc__link {
-  color: var(--secondary);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-
   position: relative;
 }
 

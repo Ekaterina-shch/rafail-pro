@@ -1,0 +1,56 @@
+/* Основной контейнер */
+.article-links-block {
+  padding: 30px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px dotted var(--line);
+  margin-bottom: 30px;
+}
+
+.article-links-block__title {
+  display: flex;
+  align-items: flex-start;
+  font-size: var(--font-xl);
+  line-height: 140%;
+  font-weight: bold;
+}
+
+.article-links-block__link {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  transition: color 0.2s ease;
+  font-size: var(--font-l);
+  line-height: 140%;
+  letter-spacing: -2%;
+}
+
+.icon-clip,
+.icon-arrow {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-style: normal;
+}
+
+/* Конкретные иконки */
+.icon-clip {
+  background-image: url('/src/assets/img/icon_paperclip.png');
+  margin-top: 2px;
+}
+
+.icon-arrow {
+  background-image: url('/src/assets/img/icon_hand.png');
+}
+@media screen and (min-width: 768px) {
+  .article-links-block__link {
+    font-size: var(--font-xl);
+  }
+}

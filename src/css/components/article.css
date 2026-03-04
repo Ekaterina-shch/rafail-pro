@@ -4,21 +4,34 @@
   border-radius: 20px;
   flex-shrink: 0;
 
-  h1 {
+  h1,
+  .h1 {
     margin-bottom: 30px;
   }
-  h2 {
+  h2,
+  .h2 {
     margin-top: 10px;
     margin-bottom: 30px;
   }
-  h3 {
+  h3,
+  .h3 {
     margin-top: 20px;
     margin-bottom: 20px;
   }
   p:not([class]) {
     margin-bottom: 30px;
   }
+
+  a {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    color: var(--primary);
+  }
 }
+
 .post-stats {
   display: flex;
   flex-direction: column;
@@ -44,16 +57,5 @@
   }
   .stats-group.views {
     text-align: right;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .article {
-    max-width: 930px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .article {
-    width: 906px;
-    max-width: none;
   }
 }

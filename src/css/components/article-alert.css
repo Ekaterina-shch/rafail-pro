@@ -2,9 +2,10 @@
   --alert-bg: transparent;
   --alert-accent: var(--dark);
 
-  padding: 20px 10px;
+  padding: 20px;
   background-color: var(--alert-bg);
   margin-bottom: 30px;
+  border-radius: 20px;
 }
 .article-alert--problem {
   --alert-bg: var(--bg-red-soft);
@@ -16,6 +17,7 @@
 }
 .article-alert--minimal {
   --alert-accent: var(--blue);
+  border-radius: 0;
 }
 .article-alert__label {
   margin-bottom: 10px;
@@ -27,4 +29,23 @@
   font-weight: 700;
   border-radius: 10px;
   display: inline-block;
+}
+
+.article-alert li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.article-alert ul li::before {
+  content: '\2022';
+  color: var(--alert-accent);
+  display: block;
+}
+
+.article-alert ol li {
+  counter-increment: my-counter;
+}
+.article-alert ol li::before {
+  content: counter(my-counter) '.';
+  color: var(--alert-accent);
 }
