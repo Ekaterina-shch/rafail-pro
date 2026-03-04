@@ -15,5 +15,7 @@
 @import './components/toc.css';
 @import './components/article-benefit.css';
 @import './components/btn-to-top.css';
+@import './components/author-card.css';
+@import './components/promo-banner.css';
 
 @import './base.css';
