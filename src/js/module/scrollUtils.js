@@ -4,10 +4,13 @@ export function initBackToTop() {
 
   if (!anchor || !btn) return;
 
-  // Скролл к началу страницы
   btn.addEventListener('click', () => {
+    const elementPosition = anchor.getBoundingClientRect().top;
+
+    const offsetPosition = elementPosition + window.pageYOffset - 150;
+
     window.scrollTo({
-      top: 0,
+      top: offsetPosition,
       behavior: 'smooth',
     });
   });

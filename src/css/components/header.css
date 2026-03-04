@@ -120,6 +120,7 @@
 @media (hover: hover) and (pointer: fine) {
   a.header__menu-link:hover {
     background-color: #585d62;
+    color: var(--white);
   }
 }
 
@@ -207,6 +208,7 @@
   .header__menu-item {
   }
   .header__menu-link {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;

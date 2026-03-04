@@ -1,0 +1,34 @@
+.section-links {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+.article-links-block__list {
+  display: grid;
+  gap: 30px;
+}
+.article-links-block__list .article-links-block__link {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  section.section-links {
+    margin-bottom: 0;
+  }
+  .section-links {
+    margin-top: 90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .article-links-block__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

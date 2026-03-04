@@ -7,6 +7,7 @@
   width: 100%;
   height: 100vh;
   padding: 0 28px 30px;
+  z-index: 1;
 }
 .mobile-menu.active {
   display: block;
@@ -17,9 +18,9 @@
 }
 .mobile-nav__list {
 }
+
 .mobile-nav__link {
-}
-.mobile-nav__link {
+  text-decoration: none;
   display: block;
   padding: 30px 0;
   border-bottom: 1px solid var(--line);

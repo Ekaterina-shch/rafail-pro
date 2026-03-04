@@ -8,12 +8,9 @@
 
 .btn-to-top {
   display: none;
-  position: sticky;
+  position: fixed;
   bottom: 10px;
-  /* right: 10px; */
-  margin-left: auto;
-  margin-bottom: 10px;
-  transform: translateX(50%);
+  right: 10px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -34,8 +31,15 @@
   opacity: 1;
   visibility: visible;
 }
+
 @media screen and (min-width: 768px) {
   .btn-to-top {
     display: flex;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .btn-to-top {
+    right: calc(50% - 650px);
+    transform: translateX(-10px);
   }
 }

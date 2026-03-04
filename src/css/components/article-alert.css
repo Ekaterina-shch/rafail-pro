@@ -31,18 +31,21 @@
   display: inline-block;
 }
 
-.article-alert li {
-  display: flex;
-  gap: 16px;
+.article-alert ul {
+  list-style: disc;
+  padding-left: 28px;
+}
+.article-alert ul li {
   margin-bottom: 30px;
 }
-.article-alert ul li::before {
-  content: '\2022';
+.article-alert ul li::marker {
   color: var(--alert-accent);
-  display: block;
 }
 
 .article-alert ol li {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
   counter-increment: my-counter;
 }
 .article-alert ol li::before {

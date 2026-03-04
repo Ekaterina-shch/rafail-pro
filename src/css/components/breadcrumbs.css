@@ -8,6 +8,10 @@
   display: inline-block;
   margin-right: 6px;
 }
+.breadcrumbs__item a {
+  text-decoration: none;
+  color: var(--dark);
+}
 
 .breadcrumbs__item.active span {
   color: var(--gray);

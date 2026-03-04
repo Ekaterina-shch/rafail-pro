@@ -21,15 +21,6 @@
   p:not([class]) {
     margin-bottom: 30px;
   }
-
-  a {
-    color: var(--secondary);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  a:hover {
-    color: var(--primary);
-  }
 }
 
 .post-stats {

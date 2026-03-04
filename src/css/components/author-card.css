@@ -12,6 +12,7 @@
   bottom: 10px;
   left: 15px;
   width: calc(100% - 30px);
+  z-index: 1;
 }
 .author-card__image-wrapper {
   width: 60px;

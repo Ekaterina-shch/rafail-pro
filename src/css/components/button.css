@@ -6,6 +6,7 @@ button,
   border-radius: var(--border-r-m);
   gap: 5px;
   width: fit-content;
+  text-decoration: none;
 }
 
 button:focus-visible,
@@ -45,5 +46,6 @@ button:focus-visible,
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
     background-color: var(--line);
+    color: var(--dark);
   }
 }

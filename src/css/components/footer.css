@@ -46,8 +46,6 @@
 
 .footer a {
   color: var(--white);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 @media (hover: hover) and (pointer: fine) {
   .footer a:hover {
@@ -91,6 +89,9 @@
   }
   .footer__item-policy {
     flex: 0 1 40%;
+  }
+  .footer__owner {
+    width: 254px;
   }
 }
 @media screen and (min-width: 1400px) {

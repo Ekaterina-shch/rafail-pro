@@ -1,3 +1,5 @@
+// mobile-menu.js
+import { debounce } from '../utils/debounce';
 import { closeModal, openModal } from './modal';
 
 export function initMobileMenu() {
@@ -26,13 +28,11 @@ export function initMobileMenu() {
 
   burgerBtn?.addEventListener('click', () => toggleMenu());
 
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      if (window.innerWidth >= 1024 && burgerBtn.classList.contains('active')) {
-        toggleMenu(false);
-      }
-    }, 100);
-  });
+  const handleResize = debounce(() => {
+    if (window.innerWidth >= 1024 && burgerBtn.classList.contains('active')) {
+      toggleMenu(false);
+    }
+  }, 100);
+
+  window.addEventListener('resize', handleResize);
 }

@@ -22,6 +22,14 @@ section:not(:last-child),
 article:not(:last-child) {
   margin-bottom: 60px;
 }
+a {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--primary);
+}
 .hidden {
   display: none !important;
 }
@@ -74,6 +82,9 @@ article:not(:last-child) {
 .left-side {
   max-width: 930px;
   flex-shrink: 0;
+}
+.section-white {
+  background-color: var(--white);
 }
 
 @media screen and (max-width: 767px) {

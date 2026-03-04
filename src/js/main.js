@@ -5,6 +5,7 @@ import { initStickyHeader } from './module/header-fixed';
 import { initMobileMenu } from './module/mobile-menu';
 import { initAuthorCardClose } from './module/authorCard';
 import { initBackToTop } from './module/scrollUtils';
+import { initPromoBanner } from './module/promo-banner';
 
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initAuthorCardClose();
   initBackToTop();
+  initPromoBanner();
 });
