@@ -24,3 +24,6 @@
 @import './base.css';
 
 @import './sections/section-links.css';
+@import './sections/testimonial.css';
+@import './sections/about.css';
+@import './sections/reviews.css';

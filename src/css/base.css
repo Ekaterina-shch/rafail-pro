@@ -18,9 +18,19 @@ h3,
 .h3 {
   font: var(--font-h3);
 }
+
 section:not(:last-child),
-article:not(:last-child) {
+.article:not(:last-child) {
   margin-bottom: 60px;
+}
+.section {
+  margin-top: 60px;
+}
+.section:first-child {
+  margin-top: 25px;
+}
+.section:last-child {
+  margin-bottom: 30px;
 }
 a {
   color: var(--secondary);
@@ -184,6 +194,12 @@ blockquote {
     padding: 40px;
     font-size: var(--font-xl);
   }
+  .section:first-child {
+    margin-top: 40px;
+  }
+  .section:last-child {
+    margin-bottom: 90px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -191,8 +207,25 @@ blockquote {
     padding-right: 47px;
     max-width: 1312px;
   }
+  .section {
+    margin-top: 90px;
+  }
+  .section:first-child {
+    margin-top: 60px;
+  }
+  .section:last-child {
+    margin-bottom: 90px;
+  }
 }
 @media screen and (min-width: 1400px) {
+  .container {
+    padding-left: 31px;
+    padding-right: 31px;
+    max-width: 1280px;
+  }
+  .section:last-child {
+    margin-bottom: 80px;
+  }
   .left-side {
     max-width: 906px;
   }
