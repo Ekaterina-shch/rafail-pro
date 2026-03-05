@@ -17,12 +17,9 @@
 }
 
 .modal__wrapper {
-  height: calc(100vh - 50px);
-  align-items: center;
-}
+  height: calc(100vh - 110px);
 
-.modal.active .modal__wrapper {
-  top: 0;
+  align-items: center;
 }
 
 .overlay {
@@ -56,8 +53,33 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 1;
 }
 .modal-close svg {
   width: 20px;
   height: 20px;
+}
+
+.modal-image--full {
+  max-width: calc(100vw - 50px);
+  max-height: calc(100vh - 80px);
+
+  width: auto;
+  height: auto;
+  object-fit: contain;
+
+  display: block;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1400px) {
+  .modal__wrapper {
+    height: calc(100vh - 50px);
+  }
+  .modal-image--full {
+    max-width: 95vw;
+    max-height: calc(100vh - 50px);
+  }
 }

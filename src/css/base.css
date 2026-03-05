@@ -39,19 +39,34 @@ figure {
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
-
-  width: fit-content; /* Контейнер сожмется под размер картинки */
-  max-width: 100%; /* Но не станет шире родителя */
+  width: fit-content;
+  max-width: 100%;
   margin: 0 auto;
 }
 figure .article-image {
   display: block;
-  width: a;
-  max-width: 100%; /* Горизонтальные займут всю ширину */
-  height: auto; /* Сохраняем пропорции */
-
-  /* Ограничение для вертикальных фото */
+  width: auto;
+  max-width: 100%;
+  height: auto;
   max-height: 70vh;
+}
+.video-block__wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+
+  position: relative;
+  padding-bottom: 56.25%; /* Соотношение 16:9 (9 / 16 * 100) */
+  height: 0;
+
+  background-color: #000;
+}
+.video-block__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 figure figcaption {
   margin-top: 10px;
@@ -76,6 +91,16 @@ figure figcaption {
 }
 .zoom-btn:hover {
   opacity: 1;
+}
+blockquote {
+  background-color: var(--bg);
+  padding: 30px;
+  border-left: 4px solid var(--primary);
+  font-style: italic;
+  font-size: var(--font-l);
+  line-height: 140%;
+  letter-spacing: -2%;
+  margin-bottom: 30px;
 }
 .hidden {
   display: none !important;
@@ -154,6 +179,10 @@ figure figcaption {
   }
   .main {
     padding-top: 30px;
+  }
+  blockquote {
+    padding: 40px;
+    font-size: var(--font-xl);
   }
 }
 @media screen and (min-width: 1024px) {

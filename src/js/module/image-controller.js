@@ -3,7 +3,7 @@ import { openModal } from './modal';
 export const initImageZoom = (modal) => {
   if (!modal) return;
 
-  const modalImg = modal.querySelector('.modal-content');
+  const modalImg = modal.querySelector('.modal-image--full');
 
   document.addEventListener('click', (event) => {
     // Ищем ближайшую кнопку зума от места клика
