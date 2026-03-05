@@ -1,13 +1,15 @@
 export function initBackToTop() {
   const anchor = document.getElementById('top-anchor');
+
   const btn = document.getElementById('js-to-top');
 
   if (!anchor || !btn) return;
 
   btn.addEventListener('click', () => {
     const elementPosition = anchor.getBoundingClientRect().top;
+    const offsetY = Number(anchor.dataset.offsetY) || 0;
 
-    const offsetPosition = elementPosition + window.pageYOffset - 150;
+    const offsetPosition = elementPosition + window.pageYOffset - offsetY;
 
     window.scrollTo({
       top: offsetPosition,
