@@ -1,20 +1,22 @@
 import { openModal } from './modal';
 
-export const initImageZoom = (modal) => {
+export const initImageZoom = (modal, btnSelector = '.zoom-btn') => {
   if (!modal) return;
 
   const modalImg = modal.querySelector('.modal-image--full');
 
   document.addEventListener('click', (event) => {
-    // Ищем ближайшую кнопку зума от места клика
-    const btn = event.target.closest('.zoom-btn');
+    const btn = event.target.closest(btnSelector);
 
     if (btn) {
-      // Находим родительский блок, чтобы забрать данные
       const imageContainer = btn.closest('.image-wrapper');
-      const sourceImg = imageContainer.querySelector('.article-image');
+      const sourceImg = imageContainer
+        ? imageContainer.querySelector('img')
+        : btn.querySelector('img');
 
-      if (modalImg) modalImg.src = sourceImg.src;
+      if (modalImg && sourceImg) {
+        modalImg.src = sourceImg.src;
+      }
 
       openModal(modal);
     }
