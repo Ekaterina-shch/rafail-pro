@@ -27,6 +27,7 @@
   font-size: var(--font-xl);
   line-height: 120%;
   font-weight: 600;
+  color: var(--dark);
 }
 .mobile-nav__link.active {
   color: var(--secondary);

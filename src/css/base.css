@@ -37,12 +37,9 @@ a {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-a:hover {
-  color: var(--primary);
-}
+
 figure {
   margin-bottom: 30px;
-  /* max-height: 500px; */
 }
 .image-wrapper {
   position: relative;
@@ -65,7 +62,7 @@ figure .article-image {
   overflow: hidden;
 
   position: relative;
-  padding-bottom: 56.25%; /* Соотношение 16:9 (9 / 16 * 100) */
+  padding-bottom: 56.25%;
   height: 0;
 
   background-color: #000;
@@ -99,9 +96,7 @@ figure figcaption {
   width: 20px;
   height: 20px;
 }
-.zoom-btn:hover {
-  opacity: 1;
-}
+
 blockquote {
   background-color: var(--bg);
   padding: 30px;
@@ -150,11 +145,13 @@ blockquote {
   margin-bottom: 60px;
 }
 .article-link:before {
-  content: url('/src/assets/img/icon_hand.png');
+  content: '';
+  background-image: url('/src/assets/img/icon_hand.png');
+  background-repeat: no-repeat;
+  background-position: center;
   display: inline-block;
-  vertical-align: sub;
   width: 26px;
-  max-height: 18px;
+  height: 18px;
 }
 .list-text {
   margin-bottom: 10px;
@@ -169,6 +166,15 @@ blockquote {
   background-color: var(--white);
 }
 
+/* hovers */
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--primary);
+  }
+  .zoom-btn:hover {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 767px) {
   .article-wrapper {
     margin-right: -15px;
@@ -232,8 +238,6 @@ blockquote {
   .article-wrapper {
     display: flex;
     gap: 30px;
-  }
-  .article-side {
   }
   .article-side--sticky {
     position: sticky;

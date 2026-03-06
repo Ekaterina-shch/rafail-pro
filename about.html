@@ -169,7 +169,7 @@
               </a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#"> Услуги </a>
+              <a class="header__menu-link" href="/services.html"> Услуги </a>
             </li>
           </ul>
         </nav>
@@ -407,6 +407,7 @@
                   class="client-review__zoom-image"
                   aria-label="Увеличить фото"
                   type="button"
+                  data-modal-open="#review-modal"
                 >
                   <img
                     src="/src/assets/img/review-1.jpg"
@@ -467,6 +468,7 @@
                   class="client-review__zoom-image"
                   aria-label="Увеличить фото"
                   type="button"
+                  data-modal-open="#review-modal"
                 >
                   <img
                     src="/src/assets/img/review-2.jpg"
@@ -638,6 +640,7 @@
                   class="client-review__zoom-image"
                   aria-label="Увеличить фото"
                   type="button"
+                  data-modal-open="#review-modal"
                 >
                   <img
                     src="/src/assets/img/review-3.jpg"
@@ -999,7 +1002,10 @@
           <div class="footer__item footer__item-policy">
             <p class="footer__item-text">
               Используя сайт, вы соглашаетесь с обработкой персональных данных в
-              соответствии с <a href="#">Политикой конфиденциальности</a>
+              соответствии с
+              <a href="#" class="footer__item-link"
+                >Политикой конфиденциальности</a
+              >
             </p>
           </div>
           <div class="footer__item">
@@ -1007,7 +1013,9 @@
               Сайт использует cookie и сервисы аналитики для улучшения работы
               сайта
             </p>
-            <p class="footer__item-text"><a href="#">Карта сайта</a></p>
+            <p class="footer__item-text">
+              <a href="#" class="footer__item-link">Карта сайта</a>
+            </p>
           </div>
           <div class="footer__item">
             <p class="footer__item-text">
@@ -1052,7 +1060,7 @@
             >
           </li>
           <li>
-            <a class="mobile-nav__link" href="#">Услуги</a>
+            <a class="mobile-nav__link" href="/services.html">Услуги</a>
           </li>
         </ul>
       </nav>
@@ -1063,11 +1071,21 @@
           </p>
 
           <div class="subscription-block__actions">
-            <a href="#" class="btn btn-small" target="_blank" rel="noopener">
+            <a
+              href="#"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
               Подписаться в Telegram
               <img src="/src/assets/img/tg.svg" alt="" width="22" height="22" />
             </a>
-            <a href="#" class="btn btn-small" target="_blank" rel="noopener">
+            <a
+              href="#"
+              class="btn btn-small btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
               Подписаться в VK
               <img src="/src/assets/img/vk.svg" alt="" width="22" height="22" />
             </a>
@@ -1076,7 +1094,7 @@
       </section>
     </div>
     <div class="modal overlay" id="image-modal">
-      <button class="modal-close" aria-label="Закрыть">
+      <button class="modal-close" data-modal-close aria-label="Закрыть">
         <svg
           width="20"
           height="20"
@@ -1105,7 +1123,7 @@
       </div>
     </div>
     <div class="modal overlay overlay--90" id="review-modal">
-      <button class="modal-close" aria-label="Закрыть">
+      <button class="modal-close" data-modal-close aria-label="Закрыть">
         <svg
           width="20"
           height="20"

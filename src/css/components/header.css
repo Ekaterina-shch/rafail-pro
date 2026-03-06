@@ -38,6 +38,9 @@
   width: 121px;
   height: 26px;
 }
+.header__logo:hover {
+  color: var(--white);
+}
 
 .header__socials {
   margin-left: auto;

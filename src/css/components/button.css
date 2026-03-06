@@ -18,8 +18,12 @@ button:focus-visible,
   background-color: var(--bg);
   color: var(--dark);
   border-radius: 10px;
-
+  font-size: var(--font-m);
+  line-height: 140%;
+  letter-spacing: -2%;
   font-weight: 700;
+  height: 42px;
+  padding: 10px 20px;
 }
 .btn-big {
   padding: 0 30px;
@@ -33,10 +37,21 @@ button:focus-visible,
   font-size: var(--font-s);
   line-height: 12px;
 }
+.btn-submit {
+  padding: 20px;
+  height: 62px;
+  width: 100%;
+}
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
 
-/* .btn-primary:active {
- 
-} */
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
 .btn:disabled,
 .btn.disabled {
   background-color: var(--gray);
@@ -45,6 +60,15 @@ button:focus-visible,
 
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
+    background-color: var(--line);
+    color: var(--dark);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+  .btn-secondary:hover {
     background-color: var(--line);
     color: var(--dark);
   }

@@ -44,11 +44,11 @@
   line-height: 140%;
 }
 
-.footer a {
+a.footer__item-link {
   color: var(--white);
 }
 @media (hover: hover) and (pointer: fine) {
-  .footer a:hover {
+  a.footer__item-link:hover {
     color: var(--yellow);
   }
 }

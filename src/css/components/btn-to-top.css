@@ -43,3 +43,9 @@
     transform: translateX(-10px);
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-to-top:hover {
+    background-color: var(--gray);
+  }
+}

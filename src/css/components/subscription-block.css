@@ -20,7 +20,6 @@
   gap: 10px;
 }
 .subscription-block__actions .btn {
-  background-color: var(--white);
   width: 100%;
 }
 .subscription-block-page .subscription-block__title {
