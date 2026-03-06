@@ -12,16 +12,16 @@
   box-shadow: 0px 5px 28px 0px var(--shadow-color);
 }
 .testimonial.orange {
-  --border-color: #f4d9c3;
-  --shadow-color: rgba(186, 99, 25, 10%);
+  --border-color: var(--border-orange);
+  --shadow-color: var(--shadow-orange);
 }
 .testimonial.blue {
-  --border-color: #cce0ff;
-  --shadow-color: rgba(20, 110, 250, 10%);
+  --border-color: var(--border-blue);
+  --shadow-color: var(--shadow-blue);
 }
 .testimonial.green {
-  --border-color: #cde6e6;
-  --shadow-color: rgba(22, 165, 167, 10%);
+  --border-color: var(--border-green);
+  --shadow-color: var(--shadow-green);
 }
 .testimonial__header {
   padding: 20px;

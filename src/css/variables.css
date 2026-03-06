@@ -11,6 +11,15 @@
   --blue: #105cff;
   --red-soft: #f66659;
 
+  --border-orange: #f4d9c3;
+  --shadow-orange: rgba(186, 99, 25, 10%);
+
+  --border-blue: #cce0ff;
+  --shadow-blue: rgba(20, 110, 250, 10%);
+
+  --border-green: #cde6e6;
+  --shadow-green: rgba(22, 165, 167, 10%);
+
   --bg: #f2f4f7;
   --bg2: #f7f6f2;
 

@@ -19,19 +19,21 @@ h3,
   font: var(--font-h3);
 }
 
-section:not(:last-child),
+section:not(:last-child, .section),
 .article:not(:last-child) {
   margin-bottom: 60px;
 }
 .section {
   margin-top: 60px;
+  margin-bottom: 0;
 }
-.section:first-child {
-  margin-top: 25px;
+.section:first-of-type {
+  margin-top: 20px;
 }
-.section:last-child {
+.section:last-of-type {
   margin-bottom: 30px;
 }
+
 a {
   color: var(--secondary);
   text-decoration: underline;
@@ -200,10 +202,10 @@ blockquote {
     padding: 40px;
     font-size: var(--font-xl);
   }
-  .section:first-child {
+  .section:first-of-type {
     margin-top: 40px;
   }
-  .section:last-child {
+  .section:last-of-type {
     margin-bottom: 90px;
   }
 }
@@ -216,11 +218,8 @@ blockquote {
   .section {
     margin-top: 90px;
   }
-  .section:first-child {
+  .section:first-of-type {
     margin-top: 60px;
-  }
-  .section:last-child {
-    margin-bottom: 90px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -229,7 +228,7 @@ blockquote {
     padding-right: 31px;
     max-width: 1280px;
   }
-  .section:last-child {
+  .section:last-of-type {
     margin-bottom: 80px;
   }
   .left-side {

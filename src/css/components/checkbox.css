@@ -4,6 +4,9 @@
   align-items: flex-start;
   cursor: pointer;
   user-select: none;
+  font-size: var(--font-s);
+  line-height: 140%;
+  letter-spacing: 2%;
 }
 .checkbox-item input[type='checkbox'] {
   height: 0;
@@ -14,13 +17,17 @@
   top: 0;
   width: 0;
 }
+.checkbox-item a {
+  color: var(--dark);
+}
+
 .checkmark {
   -ms-flex-negative: 0;
   background-color: var(--white);
   border: 1px solid var(--line);
   border-radius: 2px;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
   position: relative;
   width: 18px;
   height: 18px;
@@ -51,5 +58,8 @@
 @media (hover: hover) and (pointer: fine) {
   .checkbox-item:hover .checkmark {
     border-color: var(--tertiary);
+  }
+  .checkbox-item a:hover {
+    color: var(--primary);
   }
 }
