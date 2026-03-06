@@ -20,6 +20,10 @@ input:focus-visible {
 input::placeholder {
   color: var(--gray);
 }
+input:not(input[type='checkbox']).error {
+  border-color: var(--red);
+  color: var(--red);
+}
 
 @media (hover: hover) and (pointer: fine) {
   input:not(input[type='checkbox']):hover {

@@ -86,9 +86,34 @@
   display: block;
   margin: auto;
 }
-@media screen and (min-width: 1024px) {
+.status-modal__icon {
+  margin: 0 auto 10px;
+  width: 60px;
+  height: 60px;
+}
+.status-modal__content {
+  padding: 0 10px;
+  width: 100%;
+  max-width: 306px;
+}
+.status-modal__title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.status-modal__description {
+  text-align: center;
+  font-size: var(--font-m);
+  line-height: 140%;
+  letter-spacing: -2%;
 }
 
+@media screen and (min-width: 768px) {
+  .status-modal__content {
+    max-width: 374px;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
 @media screen and (min-width: 1400px) {
   .modal__wrapper {
     height: calc(100vh - 50px);

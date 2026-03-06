@@ -7,6 +7,7 @@ import { initAuthorCardClose } from './module/authorCard';
 import { initBackToTop } from './module/scrollUtils';
 import { initPromoBanner } from './module/promo-banner';
 import { initModalLogic } from './module/modal-controller';
+import { initForms } from './module/form';
 
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initPromoBanner();
   initModalLogic();
+  initForms();
 });
