@@ -1,9 +1,6 @@
 .reviews {
 }
-.reviews__title {
-  text-align: center;
-  margin-bottom: 20px;
-}
+
 .reviews__client-card {
   background-color: var(--white);
   border-radius: 20px;

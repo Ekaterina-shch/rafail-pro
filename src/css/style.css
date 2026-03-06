@@ -22,10 +22,13 @@
 @import './components/article-links-block.css';
 @import './components/modal.css';
 @import './components/info-block.css';
+@import './components/pagination.css';
 
 @import './sections/section-links.css';
 @import './sections/testimonial.css';
 @import './sections/about.css';
 @import './sections/reviews.css';
 @import './sections/form.css';
-@import './sections/services.css';
+
+@import './pages/services.css';
+@import './pages/articles.css';

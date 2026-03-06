@@ -3,7 +3,7 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: var(--border-r-m);
+  border-radius: 10px;
   gap: 5px;
   width: fit-content;
   text-decoration: none;
@@ -17,7 +17,6 @@ button:focus-visible,
 .btn {
   background-color: var(--bg);
   color: var(--dark);
-  border-radius: 10px;
   font-size: var(--font-m);
   line-height: 140%;
   letter-spacing: -2%;

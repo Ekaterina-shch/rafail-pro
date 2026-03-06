@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Услуги</title>
+    <title>Все статьи</title>
   </head>
   <body>
     <!-- 
@@ -169,7 +169,7 @@
               </a>
             </li>
             <li class="header__menu-item">
-              <span class="header__menu-link active"> Услуги </span>
+              <a class="header__menu-link" href="/services.html"> Услуги </a>
             </li>
           </ul>
         </nav>
@@ -187,107 +187,312 @@
                 </a>
               </li>
               <li class="breadcrumbs__item active">
-                <span>Услуги</span>
+                <span>Все статьи</span>
               </li>
             </ol>
           </nav>
         </div>
       </div>
-      <section class="section services">
+      <section class="section articles">
         <div class="container">
-          <h1 class="h1 section__title">Услуги</h1>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-comment.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">
-                  Консультация по вашему направлению
+          <h1 class="h1 section__title">Все статьи</h1>
+          <div class="articles-grid">
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-1.jpg"
+                  alt="Как получать целевые заявки стабильно?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Как получать целевые заявки стабильно?
+                </h3>
+              </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Самые частые причины, почему клики не превращаются в заявки.
+                  Это рабочие ситуации из моей практики. Пройдитесь по списку
+                  и проверьте ваш сайт и рекламу — скорее всего, ответ найдёте
+                  уже в первых пунктах. Это рабочие ситуации из моей практики.
+                  Пройдитесь по списку и проверьте ваш сайт и рекламу — скорее
+                  всего, ответ найдёте уже в первых пунктах.
                 </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
               </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Консультация по вашему направлению"
-                >
-                  Перезвоните мне
-                </button>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-2.jpg"
+                  alt="Аналитика рекламы и взаимодействие с клиентами"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Аналитика рекламы и взаимодействие с клиентами
+                </h3>
               </div>
-            </div>
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-chart-histogram.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">
-                  Аудит + пошаговые рекомендации для вашего направления
+
+              <div class="card-body">
+                <p class="card-description">
+                  Как выстроить прозрачную аналитику и понять, какие рекламные
+                  каналы действительно приводят клиентов, а какие только
+                  расходуют бюджет. Разберём типичные ошибки в отслеживании
+                  заявок, работе CRM и коммуникации с отделом продаж. Пройдитесь
+                  по ключевым этапам и проверьте свою систему — вероятно, точки
+                  роста уже есть в текущих процессах.
                 </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
               </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Аудит + пошаговые рекомендации для вашего направления"
-                >
-                  Перезвоните мне
-                </button>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-3.jpg"
+                  alt="Почему реклама не окупается?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">Почему реклама не окупается?</h3>
               </div>
-            </div>
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-interactive.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">
-                  Настройка и ведение рекламы Яндекс.Директ
+
+              <div class="card-body">
+                <p class="card-description">
+                  Причины, по которым рекламные кампании не приносят ожидаемой
+                  прибыли. Разберём ошибки в стратегии, выборе аудитории
+                  и распределении бюджета. Пройдитесь по основным пунктам
+                  и проверьте свои настройки — часто проблема кроется
+                  не в инструменте, а в деталях его использования.
                 </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
               </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Настройка и ведение рекламы Яндекс.Директ"
-                >
-                  Перезвоните мне
-                </button>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-4.jpg"
+                  alt="Как повысить конверсию сайта без редизайна?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Как повысить конверсию сайта без редизайна?
+                </h3>
               </div>
-            </div>
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-computer.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">Разработка продающего сайта</p>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Практические способы увеличить количество заявок без полной
+                  переработки сайта. Разберём структуру страниц, офферы, формы
+                  и поведенческие сценарии пользователей. Проверьте ключевые
+                  элементы своего сайта — небольшие изменения могут заметно
+                  повлиять на результат.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
               </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Разработка продающего сайта"
-                >
-                  Перезвоните мне
-                </button>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-5.jpg"
+                  alt="Что мешает масштабировать рекламу?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">Что мешает масштабировать рекламу?</h3>
               </div>
-            </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Барьеры, которые не дают увеличить объём заявок без потери
+                  качества. Разберём ограничения по аудитории, креативам
+                  и аналитике. Пройдитесь по системе целиком и оцените
+                  готовность к масштабированию — рост требует не только бюджета,
+                  но и устойчивой модели.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-6.jpg"
+                  alt="Как связать маркетинг и отдел продаж?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Как связать маркетинг и отдел продаж?
+                </h3>
+              </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Как выстроить эффективное взаимодействие между маркетингом
+                  и продажами. Разберём передачу лидов, контроль качества заявок
+                  и обратную связь по сделкам. Проверьте, насколько согласованы
+                  процессы в вашей компании — именно здесь часто теряется часть
+                  прибыли.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-7.jpg"
+                  alt="Как повысить конверсию сайта без редизайна?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Как повысить конверсию сайта без редизайна?
+                </h3>
+              </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Практические способы увеличить количество заявок без полной
+                  переработки сайта. Разберём структуру страниц, офферы, формы
+                  и поведенческие сценарии пользователей. Проверьте ключевые
+                  элементы своего сайта — небольшие изменения могут заметно
+                  повлиять на результат.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-8.jpg"
+                  alt="Почему реклама не окупается?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">Почему реклама не окупается?</h3>
+              </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Причины, по которым рекламные кампании не приносят ожидаемой
+                  прибыли. Разберём ошибки в стратегии, выборе аудитории
+                  и распределении бюджета. Пройдитесь по основным пунктам
+                  и проверьте свои настройки — часто проблема кроется
+                  не в инструменте, а в деталях его использования.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-9.jpg"
+                  alt="Аналитика рекламы и взаимодействие с клиентами"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Аналитика рекламы и взаимодействие с клиентами
+                </h3>
+              </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Как выстроить прозрачную аналитику и понять, какие рекламные
+                  каналы действительно приводят клиентов, а какие только
+                  расходуют бюджет. Разберём типичные ошибки в отслеживании
+                  заявок, работе CRM и коммуникации с отделом продаж. Пройдитесь
+                  по ключевым этапам и проверьте свою систему — вероятно, точки
+                  роста уже есть в текущих процессах.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="card-header">
+                <img
+                  src="/src/assets/img/articels/cover-10.jpg"
+                  alt="Как получать целевые заявки стабильно?"
+                  class="card-image"
+                />
+                <div class="card-overlay"></div>
+                <h3 class="card-title">
+                  Как получать целевые заявки стабильно?
+                </h3>
+              </div>
+
+              <div class="card-body">
+                <p class="card-description">
+                  Самые частые причины, почему клики не превращаются в заявки.
+                  Это рабочие ситуации из моей практики. Пройдитесь по списку
+                  и проверьте ваш сайт и рекламу — скорее всего, ответ найдёте
+                  уже в первых пунктах. Это рабочие ситуации из моей практики.
+                  Пройдитесь по списку и проверьте ваш сайт и рекламу — скорее
+                  всего, ответ найдёте уже в первых пунктах.
+                </p>
+                <a href="/index.html" class="btn btn-small read-more">
+                  Читать статью полностью
+                </a>
+              </div>
+            </article>
           </div>
+          <nav class="pagination">
+            <a href="#" class="btn btn-pagination page-nav">
+              <svg
+                width="15"
+                height="10"
+                viewBox="0 0 15 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 5H2M2 5L6 1M2 5L6 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
+            <a href="#" class="btn btn-pagination page-number">1</a>
+            <a href="#" class="btn btn-pagination page-number active">2</a>
+            <a href="#" class="btn btn-pagination page-number">3</a>
+            <span class="btn btn-pagination page-dots">...</span>
+            <a href="#" class="btn btn-pagination page-number">15</a>
+            <a href="#" class="btn btn-pagination page-nav">
+              <svg
+                width="15"
+                height="10"
+                viewBox="0 0 15 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 5H13M13 5L9 1M13 5L9 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
+          </nav>
         </div>
       </section>
     </main>
@@ -379,7 +584,7 @@
             >
           </li>
           <li>
-            <span class="mobile-nav__link active">Услуги</span>
+            <a class="mobile-nav__link" href="/services.html">Услуги</a>
           </li>
         </ul>
       </nav>

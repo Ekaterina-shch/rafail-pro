@@ -167,7 +167,10 @@ blockquote {
 .section-white {
   background-color: var(--white);
 }
-
+.section__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
 /* hovers */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
@@ -188,6 +191,9 @@ blockquote {
   }
 }
 @media screen and (min-width: 768px) {
+  .section__title {
+    margin-bottom: 40px;
+  }
   body {
     font-size: var(--font-xl);
   }
