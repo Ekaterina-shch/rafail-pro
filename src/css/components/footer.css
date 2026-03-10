@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--dark);
   color: #7c7c7c;
+  flex-shrink: 0;
 }
 .footer__top {
   padding-top: 10px;

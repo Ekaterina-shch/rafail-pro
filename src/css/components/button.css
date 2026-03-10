@@ -4,7 +4,7 @@ button,
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  gap: 5px;
+  gap: 6px;
   width: fit-content;
   text-decoration: none;
 }

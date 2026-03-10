@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Услуги</title>
+    <title>404 | Страница не найдена</title>
   </head>
   <body>
     <!-- 
@@ -169,7 +169,7 @@
               </a>
             </li>
             <li class="header__menu-item">
-              <span class="header__menu-link active"> Услуги </span>
+              <a class="header__menu-link" href="/services.html"> Услуги </a>
             </li>
           </ul>
         </nav>
@@ -187,107 +187,37 @@
                 </a>
               </li>
               <li class="breadcrumbs__item active">
-                <span>Услуги</span>
+                <span>Ошибка 404</span>
               </li>
             </ol>
           </nav>
         </div>
       </div>
-      <section class="section services">
+      <section class="section page-status">
         <div class="container">
-          <h1 class="h1 section__title">Услуги</h1>
-          <div class="services-grid">
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-comment.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">
-                  Консультация по вашему направлению
-                </p>
-              </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Консультация по вашему направлению"
-                >
-                  Перезвоните мне
-                </button>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-chart-histogram.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">
-                  Аудит + пошаговые рекомендации для вашего направления
-                </p>
-              </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Аудит + пошаговые рекомендации для вашего направления"
-                >
-                  Перезвоните мне
-                </button>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-interactive.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">
-                  Настройка и ведение рекламы Яндекс.Директ
-                </p>
-              </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Настройка и ведение рекламы Яндекс.Директ"
-                >
-                  Перезвоните мне
-                </button>
-              </div>
-            </div>
-            <div class="service-card">
-              <div class="service-card__top">
-                <div class="service-card__icon">
-                  <img
-                    src="/src/assets/img/services/fi-rr-computer.png"
-                    alt="Иконка"
-                  />
-                </div>
-                <p class="service-card__title">Разработка продающего сайта</p>
-              </div>
-              <div class="service-card__bottom">
-                <div class="service-card__price">1 000 руб./час</div>
-                <button
-                  class="btn btn-primary btn-open-modal service-card__btn"
-                  data-modal-open="#callback-modal"
-                  data-service="Разработка продающего сайта"
-                >
-                  Перезвоните мне
-                </button>
-              </div>
-            </div>
-          </div>
+          <p class="h3 page-status__subtitle">Ошибка 404</p>
+          <h1 class="h1 page-status__title">Страница не найдена</h1>
+          <p class="page-status__description">
+            Запрашиваемая страница отсутствует или была перемещена. Возможно,
+            ссылка устарела или адрес введён некорректно.
+          </p>
+          <a href="/" class="btn btn-primary page-status__btn">
+            Вернуться на главную
+            <svg
+              class="arrow"
+              width="15"
+              height="10"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 5H13M13 5L9 1M13 5L9 9"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
         </div>
       </section>
     </main>
@@ -343,6 +273,7 @@
         </div>
       </div>
     </footer>
+
     <button class="btn-to-top" id="js-to-top" aria-label="Вернуться наверх">
       <svg
         width="18"
@@ -379,7 +310,7 @@
             >
           </li>
           <li>
-            <span class="mobile-nav__link active">Услуги</span>
+            <a class="mobile-nav__link" href="/services.html">Услуги</a>
           </li>
         </ul>
       </nav>
@@ -411,179 +342,6 @@
           </div>
         </div>
       </section>
-    </div>
-
-    <div class="modal overlay" id="callback-modal">
-      <div class="modal__wrapper">
-        <div class="modal-card">
-          <button class="modal-card__btn-close" type="button" data-modal-close>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M18.7072 2.70715L2.70731 18.7072C2.31678 19.0977 1.68362 19.0977 1.29309 18.7072C0.902567 18.3166 0.902565 17.6835 1.29309 17.2929L17.293 1.29294C17.6835 0.902411 18.3167 0.902409 18.7072 1.29293C19.0977 1.68346 19.0977 2.31662 18.7072 2.70715Z"
-                fill="#393536"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.29289 1.29289C1.68342 0.902367 2.31658 0.902367 2.70711 1.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289Z"
-                fill="#393536"
-              />
-            </svg>
-          </button>
-          <form
-            class="form my-form form-modal"
-            id="callback-form"
-            data-action="http://localhost:3000/callbacks"
-          >
-            <div class="form__header">
-              <p class="h3 form-title">Перезвоните мне</p>
-              <p class="form-description">
-                Оставьте контакты — отвечу на ваши вопросы
-              </p>
-            </div>
-            <input
-              type="hidden"
-              name="service_name"
-              id="selected-service-input"
-            />
-            <div class="form-row" data-input-wrapper>
-              <input
-                type="text"
-                data-type="name"
-                name="user_name"
-                placeholder="Ваше имя"
-                data-validate
-                required
-              />
-              <p
-                class="error-message"
-                data-error
-                role="alert"
-                aria-live="assertive"
-              ></p>
-            </div>
-            <div class="form-row" data-input-wrapper>
-              <input
-                type="tel"
-                name="user_phone"
-                placeholder="Ваш телефон"
-                class="input-phone"
-                data-validate
-                required
-              />
-              <p
-                class="error-message"
-                data-error
-                role="alert"
-                aria-live="assertive"
-              ></p>
-            </div>
-            <div class="form-row">
-              <label class="checkbox-item">
-                <input type="checkbox" checked data-validate />
-                <span class="checkmark"></span>
-                <span>
-                  Я согласен с условиями обработки <a href="#"
-                    >персональных данных</a
-                  ></span
-                >
-              </label>
-            </div>
-            <button class="btn btn-primary btn-submit" type="submit">
-              Отправить
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="modal overlay" id="success-modal">
-      <div class="modal__wrapper">
-        <div class="modal-card status-modal">
-          <button class="modal-card__btn-close" type="button" data-modal-close>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M18.7072 2.70715L2.70731 18.7072C2.31678 19.0977 1.68362 19.0977 1.29309 18.7072C0.902567 18.3166 0.902565 17.6835 1.29309 17.2929L17.293 1.29294C17.6835 0.902411 18.3167 0.902409 18.7072 1.29293C19.0977 1.68346 19.0977 2.31662 18.7072 2.70715Z"
-                fill="#393536"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.29289 1.29289C1.68342 0.902367 2.31658 0.902367 2.70711 1.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289Z"
-                fill="#393536"
-              />
-            </svg>
-          </button>
-          <svg
-            class="status-modal__icon"
-            width="54"
-            height="54"
-            viewBox="0 0 54 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M26.875 0C25.4721 0 24.3291 0.59028 23.2889 1.38393C22.3147 2.12721 21.2402 3.20184 19.983 4.45914L19.8945 4.54758C18.6079 5.83425 17.4862 6.34062 15.7552 6.34062C15.5383 6.34062 15.2645 6.33294 14.9553 6.32424C14.1627 6.30192 13.1374 6.27309 12.2404 6.35067C10.9282 6.46413 9.28827 6.8232 8.04363 8.07834C6.80847 9.32388 6.45816 10.957 6.34806 12.261C6.27303 13.1499 6.30186 14.1675 6.32415 14.9544C6.33291 15.2645 6.34068 15.5387 6.34068 15.7551C6.34068 17.4862 5.83425 18.6079 4.54755 19.8946L4.45914 19.983C3.20187 21.2401 2.12721 22.3147 1.38393 23.2889C0.59028 24.329 0 25.4721 0 26.875C3e-05 28.2779 0.59031 29.4209 1.38396 30.461C2.12736 31.4354 3.20226 32.5103 4.45986 33.7676L4.54764 33.8555C5.38179 34.6895 5.77527 35.2304 5.99829 35.741C6.21546 36.2381 6.34068 36.8678 6.34068 37.9946C6.34068 38.2118 6.33297 38.4854 6.32427 38.7947C6.30198 39.5873 6.27312 40.6124 6.35073 41.5097C6.46422 42.8219 6.82332 44.4617 8.07846 45.7064C9.324 46.9415 10.9572 47.2916 12.2611 47.4017C13.1499 47.4767 14.1676 47.4479 14.9545 47.4257C15.2645 47.417 15.5387 47.4092 15.7552 47.4092C16.8582 47.4092 17.4781 47.5202 17.9661 47.7215C18.4537 47.9228 18.9751 48.2828 19.7606 49.0682C19.9282 49.2359 20.1491 49.4726 20.4039 49.7459C20.9788 50.3621 21.7268 51.1637 22.4249 51.7739C23.4843 52.7 25.0039 53.75 26.875 53.75C28.7462 53.75 30.2657 52.7 31.325 51.7739C32.0231 51.1637 32.7707 50.3627 33.3455 49.7465C33.6005 49.4729 33.8216 49.2362 33.9893 49.0682C34.7747 48.2828 35.2964 47.9228 35.7839 47.7215C36.2717 47.5202 36.8918 47.4092 37.9949 47.4092C38.2112 47.4092 38.4854 47.417 38.7956 47.4257C39.5825 47.4479 40.6001 47.4767 41.489 47.4017C42.7928 47.2916 44.426 46.9415 45.6716 45.7064C46.9265 44.4617 47.2856 42.8219 47.3993 41.5097C47.4767 40.6124 47.4479 39.5873 47.4257 38.7947C47.417 38.4857 47.4092 38.2115 47.4092 37.9946C47.4092 36.8678 47.5346 36.2381 47.7515 35.741C47.9747 35.2304 48.3683 34.6895 49.2023 33.8555L49.2902 33.7676C50.5478 32.51 51.6227 31.4354 52.3661 30.461C53.1596 29.4209 53.75 28.2779 53.75 26.875C53.75 25.472 53.1596 24.329 52.3661 23.2889C51.6227 22.3147 50.5481 21.2402 49.2908 19.983L49.2023 19.8946C48.3683 19.0604 47.9747 18.5195 47.7518 18.0089C47.5346 17.5117 47.4092 16.8822 47.4092 15.7551C47.4092 15.5384 47.417 15.265 47.4257 14.9562C47.4479 14.1636 47.4767 13.1374 47.3993 12.2404C47.2856 10.9282 46.9268 9.28833 45.6716 8.04366C44.426 6.80844 42.7928 6.4581 41.489 6.34803C40.6001 6.27297 39.5825 6.3018 38.7953 6.32409C38.4854 6.33285 38.2112 6.34062 37.9946 6.34062C36.2633 6.34062 35.1419 5.83401 33.8555 4.54758L33.767 4.45917C32.5097 3.20187 31.4354 2.12721 30.461 1.38393C29.4209 0.59028 28.2779 0 26.875 0ZM35.5301 22.8408C36.7547 22.203 37.2302 20.6933 36.5924 19.4687C35.9546 18.2441 34.445 17.7685 33.2204 18.4063C29.6504 20.2656 26.738 23.825 24.8134 26.6316C24.2711 27.4223 23.789 28.181 23.3744 28.8662C23.0914 28.6268 22.8185 28.4114 22.5666 28.2218C22.0283 27.8165 21.5442 27.497 21.1907 27.2765L20.5726 26.9111L20.5685 26.9087C19.3553 26.2498 17.8374 26.6992 17.1784 27.9125C16.5196 29.1254 16.9693 30.6431 18.182 31.3025C18.5414 31.5299 19.3199 32.0309 19.559 32.216C20.3929 32.8439 21.2427 33.6323 21.7582 34.4531C22.2424 35.2241 23.1077 35.6711 24.0168 35.6195C24.9256 35.5679 25.7349 35.0258 26.1291 34.2053C26.2569 33.9479 26.5815 33.311 26.8573 32.8244C27.3449 31.9472 28.0541 30.7469 28.937 29.4593C30.7625 26.7971 33.1001 24.1065 35.5301 22.8408Z"
-              fill="#0FA958"
-            />
-          </svg>
-
-          <p class="h3 status-modal__title">Заявка отправлена</p>
-          <p class="status-modal__description">
-            Свяжусь с вами и отвечу на ваши вопросы
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="modal overlay" id="error-modal">
-      <div class="modal__wrapper">
-        <div class="modal-card status-modal">
-          <button class="modal-card__btn-close" type="button" data-modal-close>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M18.7072 2.70715L2.70731 18.7072C2.31678 19.0977 1.68362 19.0977 1.29309 18.7072C0.902567 18.3166 0.902565 17.6835 1.29309 17.2929L17.293 1.29294C17.6835 0.902411 18.3167 0.902409 18.7072 1.29293C19.0977 1.68346 19.0977 2.31662 18.7072 2.70715Z"
-                fill="#393536"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M1.29289 1.29289C1.68342 0.902367 2.31658 0.902367 2.70711 1.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289Z"
-                fill="#393536"
-              />
-            </svg>
-          </button>
-
-          <p class="h3 status-modal__title">Произошла ошибка</p>
-          <p class="status-modal__description">
-            Повторите попытку позже или напишите мне в <a href="#">телеграм</a>
-          </p>
-        </div>
-      </div>
     </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
