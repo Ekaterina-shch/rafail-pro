@@ -10,6 +10,13 @@ export const initReviewToggler = () => {
 
     if (!text || !wrapper) return;
 
+    const existingBtn = wrapper.querySelector('.review-toggle-btn');
+    if (existingBtn) {
+      existingBtn.remove();
+    }
+    // Сбрасываем состояние развернутости, чтобы замерить реальную высоту текста
+    body.classList.remove('is-expanded');
+
     if (text.scrollHeight > text.offsetHeight) {
       const btn = document.createElement('button');
       btn.className = 'review-toggle-btn';

@@ -1,7 +1,16 @@
 import { defineConfig } from 'vite';
-
 import { resolve } from 'node:path';
 import autoprefixer from 'autoprefixer';
+import critical from 'rollup-plugin-critical';
+
+const commonInclude = [
+  /^\.header/,
+  /^\.container/,
+  /^\.breadcrumbs/,
+  /^\.mobile-menu/,
+  /^\.modal/,
+  /^\.overlay/,
+];
 
 export default defineConfig({
   css: {
@@ -26,42 +35,78 @@ export default defineConfig({
         services: resolve(__dirname, 'services.html'),
         siteMap: resolve(__dirname, 'site-map.html'),
       },
-      plugins: [
-        critical({
-          criticalUrl: './dist/', // Где лежат собранные файлы
-          criticalBase: './dist/',
-          // Список страниц для анализа
-          criticalPages: [
-            { uri: 'index.html', template: 'index' },
-            { uri: 'services.html', template: 'services' },
-            { uri: 'articles.html', template: 'articles' },
-          ],
-          criticalConfig: {
-            dimensions: [
-              { width: 375, height: 667 }, // Мобильные (Mobile-First!)
-              { width: 1366, height: 768 },
-            ],
-          },
-        }),
-      ],
+      // plugins: [
+      //   critical({
+      //     criticalUrl: './dist/', // Где лежат собранные файлы
+      //     criticalBase: './dist/',
+      //     // Список страниц для анализа
+      //     criticalPages: [
+      //       {
+      //         uri: 'index.html',
+      //         template: 'index',
+      //         criticalConfig: {
+      //           include: [
+      //             ...commonInclude,
+      //             /^\.author-card/,
+      //             /^\.promo-banner/,
+      //           ],
+      //         },
+      //       },
+      //       {
+      //         uri: 'index.html',
+      //         template: 'index',
+      //         criticalConfig: { include: commonInclude },
+      //       },
+      //       {
+      //         uri: 'about.html',
+      //         template: 'about',
+      //         criticalConfig: { include: commonInclude },
+      //       },
+      //       {
+      //         uri: 'articles.html',
+      //         template: 'articles',
+      //         criticalConfig: { include: commonInclude },
+      //       },
+      //       {
+      //         uri: 'services.html',
+      //         template: 'services',
+      //         criticalConfig: { include: commonInclude },
+      //       },
+      //       {
+      //         uri: 'site-map.html',
+      //         template: 'siteMap',
+      //         criticalConfig: { include: commonInclude },
+      //       },
+      //       {
+      //         uri: '404.html',
+      //         template: '404',
+      //         criticalConfig: { include: commonInclude },
+      //       },
+      //     ],
+      //     criticalConfig: {
+      //       inline: true,
+      //       dimensions: [
+      //         { width: 375, height: 667 }, // Мобильные (Mobile-First!)
+      //         { width: 1366, height: 1080 },
+      //       ],
+      //       ignore: {
+      //         atrule: ['@font-face'],
+      //         rule: [/^\.main$/, /^\.footer/],
+      //       },
+      //       extract: false,
+      //     },
+      //   }),
+      // ],
       output: {
-        entryFileNames: (chunkInfo) => {
-          // Если это наш main.js entry point
-          if (chunkInfo.name === 'main') {
-            return 'assets/main.js';
-          }
-          return 'assets/[name].js';
-        },
-        chunkFileNames: 'assets/[name].js',
+        entryFileNames: 'assets/js/[name].js',
+        chunkFileNames: 'assets/js/[name].js',
         assetFileNames: (assetInfo) => {
           if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'assets/style.css';
+            return 'assets/css/[name].[ext]'; // Сохранит оригинальные имена файлов
           }
           return 'assets/[name].[ext]';
         },
-        manualChunks: undefined,
       },
     },
-    cssCodeSplit: false,
   },
 });

@@ -5,7 +5,9 @@
   left: 0;
   background-color: var(--white);
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 66px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 0 28px 30px;
   z-index: 1;
 }
