@@ -156,6 +156,15 @@
   font-size: var(--font-m);
   line-height: 140%;
   letter-spacing: -2%;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.client-review__body.is-expanded p {
+  -webkit-line-clamp: unset;
+  display: block;
 }
 
 .client-review__zoom-image {
@@ -209,8 +218,10 @@
   line-height: 140%;
   letter-spacing: -2%;
   margin-top: 20px;
+  transition: transform 0.2s;
 }
-.review-toggle-btn__arrow {
+.review-toggle-btn.is-active .review-toggle-btn__arrow {
+  transform: rotate(180deg);
 }
 
 @media (hover: hover) and (pointer: fine) {
