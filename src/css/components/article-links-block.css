@@ -24,7 +24,6 @@
   transition: color 0.2s ease;
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 
 .icon-clip,

@@ -30,13 +30,12 @@
 .service-card__title {
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 .service-card__price {
   font-size: var(--font-xl);
   font-weight: 700;
   line-height: 140%;
-  letter-spacing: -2%;
+
   margin-bottom: 20px;
 }
 .service-card__btn {

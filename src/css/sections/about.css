@@ -54,7 +54,7 @@
   margin-bottom: 30px;
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
+
   color: var(--white);
   opacity: 0.8;
 }
@@ -78,7 +78,6 @@
   text-align: center;
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 
 @media screen and (min-width: 768px) {

@@ -21,7 +21,6 @@ section.section.page-status {
   text-align: center;
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 .page-status__btn {
   margin: 20px auto 0;

@@ -1,5 +1,10 @@
 .reviews {
 }
+.reviews .section__title {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .reviews__client-card {
   background-color: var(--white);
@@ -47,7 +52,7 @@
   color: var(--gray);
 }
 .client-review__history {
-  max-width: 246px;
+  max-width: 250px;
 }
 .client-review__start-date {
   color: var(--gray);
@@ -108,7 +113,6 @@
 .client-review__date-text {
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 .client-review__remark {
   display: flex;
@@ -117,7 +121,7 @@
   color: var(--gray);
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
+
   margin-bottom: 10px;
 }
 .client-review__remark::before {
@@ -155,7 +159,7 @@
 .client-review__body p {
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
+
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -216,7 +220,7 @@
   text-underline-offset: 4px;
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
+
   margin-top: 20px;
   transition: transform 0.2s;
 }
@@ -273,6 +277,12 @@
     max-width: 246px;
     text-align: right;
   }
+  .client-review__item {
+    gap: 60px;
+  }
 }
 @media screen and (min-width: 1400px) {
+  .reviews__client-card {
+    padding: 60px;
+  }
 }

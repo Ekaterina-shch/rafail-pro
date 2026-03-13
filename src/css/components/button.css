@@ -19,7 +19,7 @@ button:focus-visible,
   color: var(--dark);
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
+
   font-weight: 700;
   height: 42px;
   padding: 10px 20px;
@@ -35,6 +35,7 @@ button:focus-visible,
   height: 34px;
   font-size: var(--font-s);
   line-height: 12px;
+  border-radius: 6px;
 }
 .btn-submit {
   padding: 20px;

@@ -1,10 +1,10 @@
 .article-benefit {
-  margin-bottom: 30px;
   padding: 20px;
   background-color: var(--bg2);
   border-radius: 10px;
   display: flex;
   gap: 20px;
+  margin-bottom: 30px;
 }
 .benefit__icon-wrapper {
   width: 60px;
@@ -35,6 +35,7 @@
 @media screen and (min-width: 768px) {
   .article-benefit {
     align-items: center;
+    margin-bottom: 50px;
   }
   .benefit__title {
     font-size: var(--font-s);

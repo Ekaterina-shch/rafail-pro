@@ -1,5 +1,4 @@
 .toc {
-  margin-bottom: 60px;
 }
 .toc__title {
   margin-bottom: 30px;
@@ -13,7 +12,6 @@
   color: var(--secondary);
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 .toc__item:last-child {
   margin-bottom: 0;
@@ -28,7 +26,6 @@
   color: var(--secondary);
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 .toc__subitem:last-child {
   margin-bottom: 0;

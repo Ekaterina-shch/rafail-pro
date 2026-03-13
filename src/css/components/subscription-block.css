@@ -1,4 +1,8 @@
+.subscription {
+  display: flex;
+}
 .subscription-block {
+  margin-bottom: 30px;
   padding: 20px;
   border-radius: 20px;
   background-color: var(--dark);
@@ -21,7 +25,10 @@
 }
 .subscription-block__actions .btn {
   width: 100%;
+  padding-left: 8px;
+  padding-right: 6px;
 }
+
 .subscription-block-page .subscription-block__title {
   font-size: var(--font-xl);
 }
@@ -34,6 +41,9 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .subscription-block {
+    padding: 30px;
+  }
   .subscription-block__actions {
     gap: 20px;
   }
@@ -46,6 +56,5 @@
   }
   .subscription-block-page .subscription-block__title {
     font-size: 26px;
-    line-height: 110%;
   }
 }

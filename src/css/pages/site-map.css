@@ -6,7 +6,6 @@
   color: var(--primary);
   font-size: var(--font-l);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 
 @media (hover: hover) and (pointer: fine) {

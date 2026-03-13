@@ -21,7 +21,6 @@
 .promo-banner__text {
   font-size: var(--font-m);
   line-height: 140%;
-  letter-spacing: -2%;
 }
 @media screen and (max-width: 1399px) {
   .promo-banner {
@@ -69,6 +68,7 @@
   }
   .promo-banner__text {
     text-align: center;
+    font-size: var(--font-l);
   }
   .promo-banner__btn {
     width: 100%;

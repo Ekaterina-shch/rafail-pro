@@ -14,10 +14,12 @@
 .article-alert--success {
   --alert-bg: var(--bg-green);
   --alert-accent: var(--green);
+  margin-bottom: 20px;
 }
 .article-alert--minimal {
   --alert-accent: var(--blue);
   border-radius: 0;
+  margin-top: 10px;
 }
 .article-alert__label {
   margin-bottom: 10px;
