@@ -15,7 +15,7 @@
 }
 .about__title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: var(--white);
 }
 .about__image-wrapper {
@@ -62,7 +62,7 @@
   margin-bottom: 0;
 }
 .about__intro {
-  padding: 83px 0;
+  padding: 83px 0 82px;
   background-color: #181a1c;
   background-size: cover;
   background-repeat: no-repeat;

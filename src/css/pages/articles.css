@@ -7,15 +7,19 @@
   overflow: hidden;
   font-family: sans-serif;
   background: #fff;
-  border: 1px solid var(--border-orange);
+  outline: 1px solid var(--border-orange);
   box-shadow: 0px 5px 28px 0px var(--shadow-orange);
 }
 
 .card-header {
   position: relative;
-  height: 140px;
+  min-height: 139px;
   width: 100%;
   background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-image {
@@ -23,6 +27,9 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .card-overlay {
@@ -36,21 +43,22 @@
 }
 
 .card-title {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   color: var(--white);
   z-index: 2;
   width: 100%;
   text-align: center;
-  max-width: 300px;
+  /* max-width: 300px; */
   font-size: var(--font-l);
   line-height: 140%;
+  padding: 45px 23px 44px;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 20px 20px;
 }
 
 .card-description {
@@ -70,7 +78,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .article-card:has(.read-more:hover) {
-    border-color: var(--border-blue);
+    outline-color: var(--border-blue);
     box-shadow: 0px 5px 28px 0px var(--shadow-blue);
   }
 }

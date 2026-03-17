@@ -1,4 +1,5 @@
 .toc {
+  margin-bottom: 60px;
 }
 .toc__title {
   margin-bottom: 30px;
@@ -32,6 +33,7 @@
 }
 .toc__link {
   position: relative;
+  display: block;
 }
 
 @media (hover: hover) and (pointer: fine) {

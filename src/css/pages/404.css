@@ -27,12 +27,21 @@ section.section.page-status {
 }
 
 @media screen and (min-width: 768px) {
+  section.section.page-status {
+    margin: 90px 0 200px;
+  }
   .page-status__description {
     font-size: var(--font-xl);
   }
 }
 
 @media screen and (min-width: 1024px) {
+  section.section.page-status {
+    margin: 90px 0 76px;
+  }
 }
 @media screen and (min-width: 1400px) {
+  section.section.page-status {
+    margin: 108px 0 271px;
+  }
 }

@@ -3,10 +3,6 @@
   padding: 30px 15px;
   border-radius: 20px;
   flex-shrink: 0;
-}
-.article__body {
-  display: flex;
-  flex-direction: column;
 
   h1,
   .h1 {
@@ -17,14 +13,23 @@
     margin-top: 10px;
     margin-bottom: 30px;
   }
+
+  .h2-40 {
+    margin-bottom: 40px;
+  }
+
   h3,
   .h3 {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
   p:not([class]) {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
+}
+.article__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .post-stats {

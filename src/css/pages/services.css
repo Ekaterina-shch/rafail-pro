@@ -12,7 +12,7 @@
   gap: 20px;
   background-color: var(--white);
   padding: 30px;
-  border: 1px solid var(--border-orange);
+  outline: 1px solid var(--border-orange);
   border-radius: 20px;
   box-shadow: 0px 5px 28px 0px var(--shadow-orange);
 }
@@ -35,7 +35,6 @@
   font-size: var(--font-xl);
   font-weight: 700;
   line-height: 140%;
-
   margin-bottom: 20px;
 }
 .service-card__btn {
@@ -44,7 +43,7 @@
 
 @media (hover: hover) and (pointer: fine) {
   .service-card:has(.service-card__btn:hover) {
-    border-color: var(--border-blue);
+    outline-color: var(--border-blue);
     box-shadow: 0px 5px 28px 0px var(--shadow-blue);
   }
 }
