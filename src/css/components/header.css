@@ -34,14 +34,23 @@
 
 .header__logo {
   display: block;
-  color: var(--white);
   width: 121px;
   height: 26px;
+  position: relative;
 }
-.header__logo:hover {
-  color: var(--white);
+.header__logo--light,
+.header__logo--dark {
+  transition: opacity 0.3s ease;
 }
-
+.header__logo--light {
+}
+.header__logo--dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
 .header__socials {
   margin-left: auto;
   display: flex;
@@ -132,8 +141,13 @@
   background-color: var(--white);
   border-color: var(--line);
 }
-.header-top.active .header__logo {
-  color: var(--dark);
+.header-top.active .header__logo--light {
+  opacity: 0;
+  visibility: hidden;
+}
+.header-top.active .header__logo--dark {
+  opacity: 1;
+  visibility: visible;
 }
 .header-top.active .header__socials {
   display: none;
