@@ -129,13 +129,6 @@
   display: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  a.header__menu-link:hover {
-    background-color: #585d62;
-    color: var(--white);
-  }
-}
-
 /* header open mobile menu */
 .header-top.active {
   background-color: var(--white);
@@ -151,6 +144,17 @@
 }
 .header-top.active .header__socials {
   display: none;
+}
+
+/* hovers */
+@media (hover: hover) and (pointer: fine) {
+  .header__socials-link:hover {
+    opacity: 80%;
+  }
+  a.header__menu-link:hover {
+    background-color: #585d62;
+    color: var(--white);
+  }
 }
 
 /* media queries */

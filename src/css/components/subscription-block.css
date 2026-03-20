@@ -33,6 +33,11 @@
   font-size: var(--font-xl);
 }
 @media screen and (max-width: 767px) {
+  #mobile-menu .subscription-block__actions .btn {
+    height: 51px;
+    font-size: var(--font-m);
+  }
+
   .subscription-block-page {
     margin-left: -15px;
     margin-right: -15px;
