@@ -140,7 +140,7 @@ export const initForms = () => {
     const submitButton = form.querySelector('[type="submit"]');
     const successMessage = () => successAlert();
     const errorMessage = () => errorAlert();
-    const url = form.dataset.action || '/submit';
+    const url = form.dataset.action || '/send.php';
 
     form.addEventListener('input', () => {
       const isValid = validateForm(form);
