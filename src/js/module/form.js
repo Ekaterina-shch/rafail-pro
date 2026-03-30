@@ -104,71 +104,50 @@ const validateForm = (form) => {
   });
   return isValid;
 };
-const collectFormData = (form) => {
-  const data = {};
-  const fields = form.querySelectorAll('[name]');
 
-  fields.forEach((field) => {
-    data[field.name] = field.value.trim();
-  });
-
-  // console.log('data:', data);
-  return data;
-};
-const sendFormData = async (url, data) => {
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-    if (!response.ok) {
-      throw new Error('Ошибка отправки данных');
-    }
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error('Ошибка отправки:', error);
-    throw error;
-  }
-};
 export const initForms = () => {
   const forms = document.querySelectorAll('.my-form');
   if (!forms.length) return;
 
   forms.forEach((form) => {
     const submitButton = form.querySelector('[type="submit"]');
-    const successMessage = () => successAlert();
-    const errorMessage = () => errorAlert();
     const url = form.dataset.action || '/send.php';
 
     form.addEventListener('input', () => {
       const isValid = validateForm(form);
       submitButton.disabled = !isValid;
     });
+
     form.addEventListener('submit', async (e) => {
-      // console.log('submit triggered');
       e.preventDefault();
-      // console.log('preventDefault called');
-      if (!validateForm(form)) {
-        console.error('Форма не прошла валидацию.');
-        return;
-      }
-      const formData = collectFormData(form);
+
+      if (!validateForm(form)) return;
+
+      const formData = new FormData(form);
+
+      formData.append('action', 'cta_form_submit');
 
       try {
-        // const result = await sendFormData(url, formData);
-        e.target.reset();
+        const response = await fetch(url, {
+          method: 'POST',
+          body: formData,
+          credentials: 'same-origin',
+        });
 
-        // const goalName = form.dataset.goal;
-        // if (goalName) {
-        //   sendMetrikaGoal(goalName);
-        // }
+        if (!response.ok) throw new Error('Ошибка сети');
 
-        successMessage();
+        const result = await response.json();
+
+        if (result && result.success) {
+          form.reset();
+          successAlert();
+        } else {
+          console.error('Сервер вернул ошибку:', result.message);
+          errorAlert();
+        }
       } catch (error) {
         console.error('Ошибка при отправке:', error);
-        errorMessage();
+        errorAlert();
       }
     });
     submitButton.disabled = !0;
