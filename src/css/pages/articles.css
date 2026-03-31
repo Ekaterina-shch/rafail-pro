@@ -7,7 +7,7 @@
   overflow: hidden;
   font-family: sans-serif;
   background: #fff;
-  outline: 1px solid var(--border-orange);
+  border: 1px solid var(--border-orange);
   box-shadow: 0px 5px 28px 0px var(--shadow-orange);
 }
 
@@ -77,8 +77,8 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .article-card:has(.read-more:hover) {
-    outline-color: var(--border-blue);
+  .article-card:hover {
+    border-color: var(--border-blue);
     box-shadow: 0px 5px 28px 0px var(--shadow-blue);
   }
 }
