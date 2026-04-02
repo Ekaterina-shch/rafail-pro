@@ -393,9 +393,9 @@
                 aria-live="assertive"
               ></p>
             </div>
-            <div class="form-row">
+            <div class="form-row" data-input-wrapper>
               <label class="checkbox-item">
-                <input type="checkbox" checked data-validate />
+                <input type="checkbox" data-validate data-type="checkbox" />
                 <span class="checkmark"></span>
                 <span>
                   Я согласен с условиями обработки <a href="#"
@@ -403,6 +403,7 @@
                   ></span
                 >
               </label>
+              <span data-error class="error-message"></span>
             </div>
             <button class="btn btn-primary btn-submit" type="submit">
               Отправить

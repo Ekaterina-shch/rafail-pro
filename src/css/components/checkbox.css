@@ -63,3 +63,7 @@
     color: var(--primary);
   }
 }
+
+.checkbox-item.error .checkmark {
+  border-color: var(--red);
+}

@@ -30,76 +30,85 @@ export const errorAlert = () => {
     }, 3000);
   }
 };
-const lang = document.documentElement.lang;
-const validateField = (field) => {
+
+const validateField = (field, showError = false) => {
   const value = field.value.trim();
   const type = field.dataset.type || field.type;
   const checked = field.checked;
-  const errorMessage = field
-    .closest('[data-input-wrapper]')
-    ?.querySelector('[data-error]');
-  let isValid = !0;
+  const wrapper = field.closest('[data-input-wrapper]');
+  const errorMessage = wrapper?.querySelector('[data-error]');
+
+  let isValid = true;
   let message = '';
+
   switch (type) {
     case 'no-name':
       if (value.length) {
-        isValid = !1;
+        isValid = false;
       }
       break;
+
     case 'name':
-      const nameRegex = /^[a-zA-Zа-яА-ЯёЁ\s-]+$/;
-      if (!nameRegex.test(value)) {
-        isValid = !1;
-        message =
-          lang === 'ru'
-            ? 'Имя не должно содержать цифры и спецсимволы.'
-            : 'The name must not contain numbers or special characters.';
+      if (value.length === 0) {
+        isValid = false;
+        message = 'Введите имя.';
+      } else if (!/^[a-zA-Zа-яА-ЯёЁ\s-]+$/.test(value)) {
+        isValid = false;
+        message = 'Имя не должно содержать цифры и спецсимволы.';
       } else if (value.length < 2) {
-        isValid = !1;
-        message =
-          lang === 'ru'
-            ? 'Имя должно содержать не менее 2-х символов.'
-            : 'The name must contain at least 2 characters.';
+        isValid = false;
+        message = 'Имя должно содержать не менее 2-х символов.';
       }
       break;
     case 'tel':
-      const phoneValue = value.replace(/\D/g, '');
-      if (phoneValue.length <= 5) {
-        isValid = !1;
-        message =
-          lang === 'ru'
-            ? 'Введите корректный номер телефона.'
-            : 'Enter the correct phone number.';
+      const digits = value.replace(/\D/g, '');
+
+      const localDigits = digits.startsWith('7') ? digits.slice(1) : digits;
+      if (localDigits.length < 10) {
+        isValid = false;
+        message = 'Введите корректный номер телефона.';
       }
       break;
     case 'email':
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        isValid = !1;
-        message =
-          lang === 'ru'
-            ? 'Введите корректный email.'
-            : 'Enter the correct email address.';
+      if (value.length === 0) {
+        isValid = false;
+        message = 'Введите email.';
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        isValid = false;
+        message = 'Введите корректный email.';
       }
       break;
     case 'checkbox':
       if (!checked) {
-        isValid = !1;
+        isValid = false;
+        message = 'Необходимо ваше согласие.';
       }
       break;
   }
   if (errorMessage) {
-    errorMessage.textContent = message;
-    errorMessage.style.display = isValid ? 'none' : 'block';
+    if (showError) {
+      errorMessage.textContent = message;
+      errorMessage.style.display = isValid ? 'none' : 'block';
+    } else {
+      errorMessage.style.display = 'none';
+    }
   }
-  field.classList.toggle('error', !isValid);
+
+  // Для чекбокса вешаем error на label, а не на wrapper
+  const errorTarget =
+    (type === 'checkbox' ? field.closest('label') : null) ||
+    field.closest('[data-input-wrapper]') ||
+    field;
+
+  errorTarget?.classList.toggle('error', showError && !isValid);
   return isValid;
 };
-const validateForm = (form) => {
-  let isValid = !0;
+const validateForm = (form, showErrors = false) => {
+  let isValid = true;
   const fields = form.querySelectorAll('[data-validate]');
   fields.forEach((field) => {
-    const isFieldValid = validateField(field);
-    field.classList.toggle('error', !isFieldValid);
+    const shouldShow = showErrors || field.dataset.touched === 'true';
+    const isFieldValid = validateField(field, shouldShow);
     isValid = isValid && isFieldValid;
   });
   return isValid;
@@ -113,18 +122,33 @@ export const initForms = () => {
     const submitButton = form.querySelector('[type="submit"]');
     const url = form.dataset.action || '/send.php';
 
-    form.addEventListener('input', () => {
-      const isValid = validateForm(form);
-      submitButton.disabled = !isValid;
+    form.addEventListener('input', (e) => {
+      const field = e.target.closest('[data-validate]');
+      if (field) {
+        field.dataset.touched = 'true';
+        validateField(field, true);
+      }
+    });
+
+    form.addEventListener('change', (e) => {
+      const field = e.target.closest('[data-validate]');
+      if (
+        field &&
+        (field.type === 'checkbox' || field.dataset.type === 'checkbox')
+      ) {
+        field.dataset.touched = 'true';
+        validateField(field, true);
+      }
     });
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      if (!validateForm(form)) return;
+      const isValid = validateForm(form, true);
+
+      if (!isValid) return;
 
       const formData = new FormData(form);
-
       formData.append('action', 'cta_form_submit');
 
       try {
@@ -150,6 +174,5 @@ export const initForms = () => {
         errorAlert();
       }
     });
-    submitButton.disabled = !0;
   });
 };
