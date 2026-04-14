@@ -22,6 +22,15 @@ export const initModalLogic = () => {
         serviceInput.value = serviceName || 'Общий запрос';
       }
 
+      const metricGoal = trigger.dataset.metric;
+      const form = targetModal.querySelector('form');
+
+      if (form && metricGoal) {
+        // Сохраняем цель в data-атрибут самой формы,
+        // чтобы при отправке (submit) знать, какую цель вызвать
+        form.dataset.metricTarget = metricGoal;
+      }
+
       // 2. Логика для ЗУМА изображений
       // Если у кнопки есть data-modal-image или это кнопка зума
       const modalImg = targetModal.querySelector('.modal-image--full');

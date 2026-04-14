@@ -43,7 +43,7 @@ const validateField = (field, showError = false) => {
 
   switch (type) {
     case 'no-name':
-      if (value.length) {
+      if (value.length > 0) {
         isValid = false;
       }
       break;
@@ -163,6 +163,12 @@ export const initForms = () => {
         const result = await response.json();
 
         if (result && result.success) {
+          const goal = form.dataset.metricTarget;
+          if (goal && typeof ym !== 'undefined') {
+            ym(108518563, 'reachGoal', goal);
+            console.log(`Цель ${goal} отправлена`);
+          }
+
           form.reset();
           successAlert();
         } else {
