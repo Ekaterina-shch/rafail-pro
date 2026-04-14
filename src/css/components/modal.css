@@ -105,9 +105,49 @@
   line-height: 140%;
 }
 
+.modal-card__content {
+  max-width: 500px;
+  padding: 20px 10px 30px;
+}
+.modal-card__description {
+  font-size: 20px;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -2%;
+  text-align: center;
+}
+.modal-card__title {
+  font-size: 20px;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -2%;
+  text-align: center;
+  color: var(--gray);
+}
+.modal-card__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.modal-card__social-link {
+}
+@media (hover: hover) and (pointer: fine) {
+  .modal-card__social-link:hover {
+    opacity: 80%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .status-modal__content {
     max-width: 374px;
+  }
+  .modal-card__description {
+    font-size: 26px;
+  }
+  .modal-card__title {
+    font-size: 26px;
   }
 }
 @media screen and (min-width: 1024px) {
