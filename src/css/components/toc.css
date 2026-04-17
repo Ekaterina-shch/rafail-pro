@@ -1,7 +1,8 @@
 .toc {
   margin-bottom: 60px;
 }
-.toc__title {
+.h2.toc__title {
+  margin-top: 0;
   margin-bottom: 30px;
 }
 .toc__list {

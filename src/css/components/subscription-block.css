@@ -44,6 +44,9 @@
     border-radius: 0;
     padding: 30px;
   }
+  .subscription-block-page.last {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .subscription-block {

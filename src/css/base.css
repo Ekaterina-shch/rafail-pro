@@ -169,11 +169,7 @@ blockquote {
   width: 26px;
   height: 18px;
 }
-.list-text {
-  padding-bottom: 10px;
-  font-size: var(--font-xl);
-  line-height: 140%;
-}
+
 .left-side {
   max-width: 930px;
   flex-shrink: 0;

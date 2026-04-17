@@ -1,11 +1,15 @@
-.sitemap {
+.section.site-map {
+  margin-bottom: 60px;
+}
+
+.site-map__nav {
   margin-top: 40px;
 }
-.sitemap ul {
+.site-map__nav ul {
   list-style-type: none;
 }
 
-.sitemap a {
+.site-map__nav a {
   color: var(--primary);
   font-size: var(--font-l);
   line-height: 140%;
@@ -13,49 +17,52 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .sitemap a:hover {
+  .site-map__nav a:hover {
     color: var(--secondary);
   }
 }
 
-.sitemap ul ul {
+.site-map__nav ul ul {
   list-style-type: disc;
   padding-left: 42px;
   margin-top: 16px;
 }
 
-.sitemap ul ul ul {
+.site-map__nav ul ul ul {
   padding-left: 20px;
   margin-top: 16px;
 }
 
-.sitemap ul li::marker {
+.site-map__nav ul li::marker {
   color: var(--primary);
 }
 
-.sitemap > ul > li {
+.site-map__nav > ul > li {
   margin-bottom: 30px;
   line-height: 1;
 }
 
-.sitemap > ul > li:last-child {
+.site-map__nav > ul > li:last-child {
   margin-bottom: 0;
 }
 
-.sitemap ul ul li {
+.site-map__nav ul ul li {
   margin-bottom: 16px;
   line-height: 1;
 }
 
-.sitemap ul ul li:last-child {
+.site-map__nav ul ul li:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .sitemap ul ul {
+  .section.site-map {
+    margin-bottom: 90px;
+  }
+  .site-map__nav ul ul {
     padding-left: 52px;
   }
-  .sitemap ul ul ul {
+  .site-map__nav ul ul ul {
     padding-left: 35px;
   }
 }

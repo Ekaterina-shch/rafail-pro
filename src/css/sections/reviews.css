@@ -41,7 +41,7 @@
 .client-review__user-info {
 }
 .client-review__name {
-  font-size: var(--font-l);
+  font-size: var(--font-xl);
   line-height: 140%;
   font-weight: 700;
   margin-bottom: 2px;

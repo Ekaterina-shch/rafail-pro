@@ -14,6 +14,14 @@
     font-size: var(--font-l);
     line-height: 140%;
   }
+  p.list-text {
+    padding-bottom: 10px;
+    font-size: var(--font-xl);
+    line-height: 140%;
+  }
+}
+.article-alert:has(+ .line) {
+  margin-bottom: 90px;
 }
 .article-alert--problem {
   --alert-bg: var(--bg-red-soft);

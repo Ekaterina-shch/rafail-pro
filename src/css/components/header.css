@@ -222,12 +222,16 @@
     left: 0;
   }
   .header__menu {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns:
+      18fr /* ~162px */
+      33fr /* ~293px */
+      33fr /* ~293px */
+      17fr; /* ~152px */
+
     gap: 10px;
   }
-  .header__menu-item {
-  }
+
   .header__menu-link {
     text-decoration: none;
     display: flex;
@@ -252,6 +256,9 @@
   }
 }
 @media screen and (min-width: 1400px) {
+  .header__menu {
+    grid-template-columns: 240px 364px 364px 220px;
+  }
   .header__menu-link {
     padding: 10px 40px;
     min-width: 220px;
